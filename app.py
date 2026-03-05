@@ -10,6 +10,13 @@ from google.genai import types
 STORE_NAME_FILE = ".store_name"
 PACKAGES_DB = "packages.json"
 PACKAGES_YAML = "packages.yaml"
+SYSTEM_PROMPT_FILE = "system_prompt.txt"
+
+def load_system_prompt():
+    if os.path.exists(SYSTEM_PROMPT_FILE):
+        with open(SYSTEM_PROMPT_FILE, "r", encoding="utf-8") as f:
+            return f.read().strip()
+    return "You are a helpful assistant."
 
 def load_packages():
     if not os.path.exists(PACKAGES_YAML):
@@ -180,11 +187,13 @@ def ask(query):
         store_name = f.read().strip()
         
     print(f"Querying store {store_name}...\n")
+    system_prompt = load_system_prompt()
     try:
         response = client.models.generate_content(
             model="gemini-3-pro-preview",
             contents=query,
             config=types.GenerateContentConfig(
+                system_instruction=system_prompt,
                 tools=[
                     types.Tool(
                         file_search=types.FileSearch(
