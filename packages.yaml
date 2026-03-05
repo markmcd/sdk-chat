@@ -14,3 +14,12 @@
   package: llama-index-llms-google-genai
   language: Python
   url: https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/llms/llama-index-llms-google-genai
+- owner: vercel
+  package: vercel-ai-sdk-core
+  language: TypeScript
+  url: https://github.com/vercel/ai/tree/main/packages/ai
+- owner: vercel
+  package: vercel-ai-sdk-google
+  language: TypeScript
+  url: https://github.com/vercel/ai/tree/main/packages/google
+

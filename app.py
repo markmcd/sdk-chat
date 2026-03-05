@@ -64,21 +64,30 @@ def ingest(update=False):
     for pkg in PACKAGES:
         pkg_name = pkg["package"]
         
+        # If it's already in the DB and we have a file_name, we're definitely done.
+        # If we have a pending_operation_name, we should resume polling.
         if pkg_name in db and not update:
-            print(f"Skipping {pkg_name} (already indexed). Use --update to refresh.")
-            continue
+            if db[pkg_name].get("file_name"):
+                print(f"Skipping {pkg_name} (already indexed). Use --update to refresh.")
+                continue
+            elif db[pkg_name].get("pending_operation_name"):
+                print(f"Resuming indexing for {pkg_name} from previous session...")
+                # Create a placeholder operation object
+                dummy_op = types.UploadToFileSearchStoreOperation(name=db[pkg_name]["pending_operation_name"])
+                op = client.operations.get(dummy_op)
+                pending_operations.append((pkg_name, pkg, op, None))
+                continue
 
         print(f"\n--- {'Updating' if update else 'Ingesting'} {pkg_name} ---")
         
-        # If updating and we have a previous file ID, delete it
-        if update and pkg_name in db and "file_name" in db[pkg_name]:
+        # If updating, delete the old file
+        if update and pkg_name in db and db[pkg_name].get("file_name"):
             old_file_id = db[pkg_name]["file_name"]
-            if old_file_id:
-                print(f"Removing old version of {pkg_name} ({old_file_id})...")
-                try:
-                    client.files.delete(name=old_file_id)
-                except Exception as e:
-                    print(f"Warning: Could not delete old file: {e}")
+            print(f"Removing old version of {pkg_name} ({old_file_id})...")
+            try:
+                client.files.delete(name=old_file_id)
+            except Exception as e:
+                print(f"Warning: Could not delete old file: {e}")
 
         filename = f"{pkg_name}.txt"
         
@@ -93,21 +102,44 @@ def ingest(update=False):
         metadata = f"Owner: {pkg['owner']}\nPackage: {pkg['package']}\nLanguage: {pkg['language']}\nURL: {pkg['url']}\n\n"
         content = metadata + content
         
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write(content)
-            
         print(f"Uploading {pkg_name} to File Search Store {store_name}...")
-        operation = client.file_search_stores.upload_to_file_search_store(
-            file=filename,
-            file_search_store_name=store_name,
-            config={'display_name': pkg_name}
-        )
         
-        pending_operations.append((pkg_name, pkg, operation))
+        # Unique filename for upload
+        unique_filename = f"{int(time.time())}_{pkg_name}.txt"
+        with open(unique_filename, "w", encoding="utf-8") as f:
+            f.write(content)
+
+        # Retry logic for upload
+        max_retries = 3
+        operation = None
+        for attempt in range(max_retries):
+            try:
+                operation = client.file_search_stores.upload_to_file_search_store(
+                    file=unique_filename,
+                    file_search_store_name=store_name,
+                    config={'display_name': pkg_name}
+                )
+                break
+            except Exception as e:
+                print(f"  Upload attempt {attempt + 1} failed: {e}")
+                if attempt < max_retries - 1:
+                    time.sleep(10)
+                else:
+                    raise e
+        
+        # IMMEDIATELY save the operation name to the local DB so we don't lose it if we crash
+        pkg_entry = pkg.copy()
+        pkg_entry["pending_operation_name"] = operation.name
+        pkg_entry["last_ingested"] = time.ctime()
+        db[pkg_name] = pkg_entry
+        with open(PACKAGES_DB, "w") as f:
+            json.dump(list(db.values()), f, indent=2)
+
+        pending_operations.append((pkg_name, pkg, operation, unique_filename))
         
     if pending_operations:
         print("\nWaiting for all indexing operations to complete on the Gemini backend...")
-        for pkg_name, pkg, operation in pending_operations:
+        for pkg_name, pkg, operation, unique_filename in pending_operations:
             print(f"Waiting for {pkg_name} to finish indexing...")
             while not operation.done:
                 time.sleep(5)
@@ -115,6 +147,10 @@ def ingest(update=False):
                 operation = client.operations.get(operation)
                 
             print(f"Finished indexing {pkg_name}.")
+
+            # Cleanup the unique file
+            if os.path.exists(unique_filename):
+                os.remove(unique_filename)
 
             # Extract file name from the operation result
             uploaded_file_name = None
