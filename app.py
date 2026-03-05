@@ -124,7 +124,15 @@ def ingest(update=False):
                 operation = client.file_search_stores.upload_to_file_search_store(
                     file=unique_filename,
                     file_search_store_name=store_name,
-                    config={'display_name': pkg_name}
+                    config={
+                        'display_name': pkg_name,
+                        'custom_metadata': [
+                            {'key': 'owner', 'string_value': pkg['owner']},
+                            {'key': 'package', 'string_value': pkg['package']},
+                            {'key': 'language', 'string_value': pkg['language']},
+                            {'key': 'url', 'string_value': pkg['url']}
+                        ]
+                    }
                 )
                 break
             except Exception as e:
