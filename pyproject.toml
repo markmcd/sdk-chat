@@ -1,0 +1,10 @@
+[project]
+name = "sdk-chat"
+version = "0.1.0"
+description = "AI SDK Document Ingestion and Query App"
+requires-python = ">=3.10"
+dependencies = [
+    "gitingest",
+    "google-genai",
+    "pyyaml>=6.0.3",
+]
