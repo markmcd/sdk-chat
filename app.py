@@ -59,6 +59,8 @@ def ingest(update=False):
             except json.JSONDecodeError:
                 db = {}
     
+    pending_operations = []
+    
     for pkg in PACKAGES:
         pkg_name = pkg["package"]
         
@@ -101,28 +103,31 @@ def ingest(update=False):
             config={'display_name': pkg_name}
         )
         
-        while not operation.done:
-            print("  Indexing...")
-            time.sleep(5)
-            operation = client.operations.get(operation)
-            
-        print(f"Finished indexing {pkg_name}.")
-        # Debug print
-        # print(f"DEBUG: operation type: {type(operation)}")
-        # print(f"DEBUG: operation data: {operation}")
-
-        # Extract file name from the operation result
-        uploaded_file_name = None
-        # Based on typical google-genai response structure for this operation
-        if hasattr(operation, 'response') and operation.response:
-             if hasattr(operation.response, 'name'):
-                 uploaded_file_name = operation.response.name
+        pending_operations.append((pkg_name, pkg, operation))
         
-        # Update local DB entry
-        pkg_entry = pkg.copy()
-        pkg_entry["file_name"] = uploaded_file_name
-        pkg_entry["last_ingested"] = time.ctime()
-        db[pkg_name] = pkg_entry
+    if pending_operations:
+        print("\nWaiting for all indexing operations to complete on the Gemini backend...")
+        for pkg_name, pkg, operation in pending_operations:
+            print(f"Waiting for {pkg_name} to finish indexing...")
+            while not operation.done:
+                time.sleep(5)
+                print(f"  Still indexing {pkg_name}...")
+                operation = client.operations.get(operation)
+                
+            print(f"Finished indexing {pkg_name}.")
+
+            # Extract file name from the operation result
+            uploaded_file_name = None
+            # Based on typical google-genai response structure for this operation
+            if hasattr(operation, 'response') and operation.response:
+                 if hasattr(operation.response, 'name'):
+                     uploaded_file_name = operation.response.name
+            
+            # Update local DB entry
+            pkg_entry = pkg.copy()
+            pkg_entry["file_name"] = uploaded_file_name
+            pkg_entry["last_ingested"] = time.ctime()
+            db[pkg_name] = pkg_entry
         
     with open(PACKAGES_DB, "w") as f:
         json.dump(list(db.values()), f, indent=2)
