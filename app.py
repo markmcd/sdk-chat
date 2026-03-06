@@ -100,7 +100,13 @@ def ingest(update=False):
         
         # Run gitingest
         print(f"Downloading and processing with gitingest from {pkg['url']}...")
-        subprocess.run(["gitingest", pkg["url"], "-o", filename], check=True)
+        cmd = ["gitingest", pkg["url"], "-o", filename]
+        
+        if "exclude" in pkg:
+            for pattern in pkg["exclude"]:
+                cmd.extend(["-e", pattern])
+                
+        subprocess.run(cmd, check=True)
         
         # Read the file and prepend metadata
         with open(filename, "r", encoding="utf-8") as f:
@@ -111,21 +117,31 @@ def ingest(update=False):
         
         print(f"Uploading {pkg_name} to File Search Store {store_name}...")
         
-        # Unique filename for upload
-        unique_filename = f"{int(time.time())}_{pkg_name}.txt"
-        with open(unique_filename, "w", encoding="utf-8") as f:
-            f.write(content)
-
         # Retry logic for upload
-        max_retries = 3
+        max_retries = 5
         operation = None
+        unique_filename = ""
         for attempt in range(max_retries):
             try:
-                operation = client.file_search_stores.upload_to_file_search_store(
+                # Unique filename for upload, generated fresh for each attempt
+                unique_filename = f"{int(time.time())}_{pkg_name}_attempt{attempt}.txt"
+                with open(unique_filename, "w", encoding="utf-8") as f:
+                    f.write(content)
+                    
+                # Step 1: Upload the file normally
+                uploaded_file = client.files.upload(
                     file=unique_filename,
+                    config={'display_name': pkg_name}
+                )
+                
+                print(f"  File uploaded to {uploaded_file.name}. Waiting before importing to store...")
+                time.sleep(15) # Give the backend time to process the file (count tokens, etc.)
+                
+                # Step 2: Import the file into the File Search Store with metadata
+                operation = client.file_search_stores.import_file(
                     file_search_store_name=store_name,
+                    file_name=uploaded_file.name,
                     config={
-                        'display_name': pkg_name,
                         'custom_metadata': [
                             {'key': 'owner', 'string_value': pkg['owner']},
                             {'key': 'package', 'string_value': pkg['package']},
@@ -136,12 +152,20 @@ def ingest(update=False):
                 )
                 break
             except Exception as e:
-                print(f"  Upload attempt {attempt + 1} failed: {e}")
+                print(f"  Upload/Import attempt {attempt + 1} failed: {e}")
+                # Clean up the failed attempt's file
+                if os.path.exists(unique_filename):
+                    os.remove(unique_filename)
+                
                 if attempt < max_retries - 1:
-                    time.sleep(10)
+                    time.sleep(30) # Wait longer on 503 errors
                 else:
-                    raise e
-        
+                    print(f"  FAILED to upload {pkg_name} after {max_retries} attempts. Skipping.")
+                    operation = None
+                    
+        if operation is None:
+            continue
+                    
         # IMMEDIATELY save the operation name to the local DB so we don't lose it if we crash
         pkg_entry = pkg.copy()
         pkg_entry["pending_operation_name"] = operation.name
@@ -164,7 +188,7 @@ def ingest(update=False):
             print(f"Finished indexing {pkg_name}.")
 
             # Cleanup the unique file
-            if os.path.exists(unique_filename):
+            if unique_filename and os.path.exists(unique_filename):
                 os.remove(unique_filename)
 
             # Extract file name from the operation result

@@ -22,4 +22,10 @@
   package: vercel-ai-sdk-google
   language: TypeScript
   url: https://github.com/vercel/ai/tree/main/packages/google
+  exclude:
+    - "*/__fixtures__/*"
+    - "*/__snapshots__/*"
+    - "*.test.ts"
+    - "*.json"
+
 
