@@ -822,7 +822,7 @@ wheels = [
 [[package]]
 name = "sdk-chat"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "gitingest" },
     { name = "google-genai" },

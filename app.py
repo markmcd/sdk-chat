@@ -240,6 +240,18 @@ def ask(query):
     except Exception as e:
         print(f"Error querying model: {e}")
 
+def run_ingest():
+    parser = argparse.ArgumentParser(description="Ingest repositories and build index")
+    parser.add_argument("--update", action="store_true", help="Force update of existing packages")
+    args = parser.parse_args()
+    ingest(update=args.update)
+
+def run_ask():
+    parser = argparse.ArgumentParser(description="Ask a question against the built index")
+    parser.add_argument("query", type=str, help="The question to ask")
+    args = parser.parse_args()
+    ask(args.query)
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="AI SDK Document Ingestion and Query App")
     subparsers = parser.add_subparsers(dest="command", required=True)
