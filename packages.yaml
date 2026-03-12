@@ -83,3 +83,220 @@
   url: https://github.com/milvus-io/pymilvus/tree/master/pymilvus
   exclude: ["*/tests/*", "*.pyc", "__pycache__"]
 
+- owner: crewAIInc
+  package: crewAI
+  language: Python
+  url: https://github.com/crewAIInc/crewAI/tree/main/lib/crewai/src/crewai
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: microsoft
+  package: semantic-kernel-dotnet
+  language: C#
+  url: https://github.com/microsoft/semantic-kernel/tree/main/dotnet/src/SemanticKernel.Core
+- owner: microsoft
+  package: semantic-kernel-dotnet-google
+  language: C#
+  url: https://github.com/microsoft/semantic-kernel/tree/main/dotnet/src/Connectors/Connectors.Google
+- owner: microsoft
+  package: semantic-kernel-java
+  language: Java
+  url: https://github.com/microsoft/semantic-kernel/tree/main/java/semantickernel-api
+  exclude:
+    - '*/test/*'
+- owner: livekit
+  package: livekit-agents
+  language: Python
+  url: https://github.com/livekit/agents/tree/main/livekit-agents/livekit/agents
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: livekit
+  package: livekit-plugins-google
+  language: Python
+  url: https://github.com/livekit/agents/tree/main/livekit-plugins/livekit-plugins-google/livekit/plugins/google
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: agno-agi
+  package: agno
+  language: Python
+  url: https://github.com/agno-agi/agno/tree/main/libs/agno/agno
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: firebase
+  package: genkit-js-core
+  language: TypeScript
+  url: https://github.com/firebase/genkit/tree/main/js/core/src
+  exclude:
+    - '*/tests/*'
+    - '*.test.ts'
+    - '*/__fixtures__/*'
+- owner: firebase
+  package: genkit-js-ai
+  language: TypeScript
+  url: https://github.com/firebase/genkit/tree/main/js/ai/src
+  exclude:
+    - '*/tests/*'
+    - '*.test.ts'
+    - '*/__fixtures__/*'
+- owner: firebase
+  package: genkit-js-google-genai
+  language: TypeScript
+  url: https://github.com/firebase/genkit/tree/main/js/plugins/google-genai/src
+  exclude:
+    - '*/tests/*'
+    - '*.test.ts'
+- owner: firebase
+  package: genkit-go
+  language: Go
+  url: https://github.com/firebase/genkit/tree/main/go/genkit
+  exclude:
+    - '*/*_test.go'
+- owner: firebase
+  package: genkit-go-google-genai
+  language: Go
+  url: https://github.com/firebase/genkit/tree/main/go/plugins/googlegenai
+  exclude:
+    - '*/*_test.go'
+- owner: firebase
+  package: genkit-py
+  language: Python
+  url: https://github.com/firebase/genkit/tree/main/py/packages/genkit
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: firebase
+  package: genkit-py-google-genai
+  language: Python
+  url: https://github.com/firebase/genkit/tree/main/py/plugins/google-genai/src
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: mastra-ai
+  package: mastra-core
+  language: TypeScript
+  url: https://github.com/mastra-ai/mastra/tree/main/packages/core
+  exclude:
+    - '*/tests/*'
+    - '*.test.ts'
+- owner: microsoft
+  package: autogen-core
+  language: Python
+  url: https://github.com/microsoft/autogen/tree/main/python/packages/autogen-core/src/autogen_core
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: microsoft
+  package: autogen-dotnet-core
+  language: C#
+  url: https://github.com/microsoft/autogen/tree/main/dotnet/src/AutoGen.Core
+- owner: microsoft
+  package: autogen-dotnet-gemini
+  language: C#
+  url: https://github.com/microsoft/autogen/tree/main/dotnet/src/AutoGen.Gemini
+- owner: Upsonic
+  package: Upsonic
+  language: Python
+  url: https://github.com/Upsonic/Upsonic/tree/master/src/upsonic
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: yamadashy
+  package: repomix
+  language: TypeScript
+  url: https://github.com/yamadashy/repomix/tree/main/src
+  exclude:
+    - '*/tests/*'
+    - '*.test.ts'
+- owner: microsoft
+  package: agent-framework-python
+  language: Python
+  url: https://github.com/microsoft/agent-framework/tree/main/python
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: microsoft
+  package: agent-framework-dotnet
+  language: C#
+  url: https://github.com/microsoft/agent-framework/tree/main/dotnet/src
+- owner: CopilotKit
+  package: CopilotKit-ts
+  language: TypeScript
+  url: https://github.com/CopilotKit/CopilotKit/tree/main/packages
+  exclude:
+    - '*/tests/*'
+    - '*.test.ts'
+    - '*/__fixtures__/*'
+- owner: CopilotKit
+  package: CopilotKit-ts-google
+  language: TypeScript
+  url: https://github.com/CopilotKit/CopilotKit/tree/main/packages/v1/runtime/src/service-adapters/google
+  exclude:
+    - '*/tests/*'
+    - '*.test.ts'
+- owner: CopilotKit
+  package: CopilotKit-py
+  language: Python
+  url: https://github.com/CopilotKit/CopilotKit/tree/main/sdk-python/copilotkit
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: mem0ai
+  package: mem0
+  language: Python
+  url: https://github.com/mem0ai/mem0/tree/main/mem0
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: mem0ai
+  package: mem0-ts
+  language: TypeScript
+  url: https://github.com/mem0ai/mem0/tree/main/mem0-ts/src
+  exclude:
+    - '*/tests/*'
+    - '*.test.ts'
+- owner: openai
+  package: swarm
+  language: Python
+  url: https://github.com/openai/swarm/tree/main/swarm
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: letta-ai
+  package: letta
+  language: Python
+  url: https://github.com/letta-ai/letta/tree/main/letta
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: openai
+  package: openai-agents
+  language: Python
+  url: https://github.com/openai/openai-agents-python/tree/main/src/agents
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: camel-ai
+  package: camel
+  language: Python
+  url: https://github.com/camel-ai/camel/tree/master/camel
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
