@@ -102,7 +102,7 @@
 - owner: microsoft
   package: semantic-kernel-java
   language: Java
-  url: https://github.com/microsoft/semantic-kernel/tree/main/java/semantickernel-api
+  url: https://github.com/microsoft/semantic-kernel-java/tree/main/semantickernel-api
   exclude:
     - '*/test/*'
 - owner: livekit
