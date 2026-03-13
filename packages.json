@@ -5,7 +5,7 @@
     "language": "Python",
     "url": "https://github.com/langchain-ai/langchain/tree/master/libs/langchain",
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:16:39 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
   },
   {
     "owner": "langchain-ai",
@@ -13,7 +13,7 @@
     "language": "Python",
     "url": "https://github.com/langchain-ai/langchain-google/tree/main/libs/genai",
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:16:45 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
   },
   {
     "owner": "run-llama",
@@ -21,7 +21,7 @@
     "language": "Python",
     "url": "https://github.com/run-llama/llama_index/tree/main/llama-index-core",
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:16:51 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
   },
   {
     "owner": "run-llama",
@@ -29,7 +29,7 @@
     "language": "Python",
     "url": "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/llms/llama-index-llms-google-genai",
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:16:57 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
   },
   {
     "owner": "vercel",
@@ -37,7 +37,7 @@
     "language": "TypeScript",
     "url": "https://github.com/vercel/ai/tree/main/packages/ai",
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:17:03 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
   },
   {
     "owner": "lancedb",
@@ -50,7 +50,7 @@
       "__pycache__"
     ],
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:17:09 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
   },
   {
     "owner": "microsoft",
@@ -64,7 +64,7 @@
       "*/samples/*"
     ],
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:17:16 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
   },
   {
     "owner": "langchain-ai",
@@ -77,7 +77,7 @@
       "__pycache__"
     ],
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:17:22 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
   },
   {
     "owner": "pydantic",
@@ -90,7 +90,7 @@
       "__pycache__"
     ],
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:17:28 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
   },
   {
     "owner": "chroma-core",
@@ -103,7 +103,7 @@
       "__pycache__"
     ],
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:17:34 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
   },
   {
     "owner": "chroma-core",
@@ -116,7 +116,7 @@
       "*/__fixtures__/*"
     ],
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:17:40 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
   },
   {
     "owner": "browser-use",
@@ -129,7 +129,7 @@
       "__pycache__"
     ],
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:17:46 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
   },
   {
     "owner": "pinecone-io",
@@ -142,7 +142,7 @@
       "__pycache__"
     ],
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:17:52 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
   },
   {
     "owner": "weaviate",
@@ -155,6 +155,322 @@
       "__pycache__"
     ],
     "file_name": null,
-    "last_ingested": "Fri Mar  6 17:17:58 2026"
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
+  },
+  {
+    "owner": "crewAIInc",
+    "package": "crewAI",
+    "language": "Python",
+    "url": "https://github.com/crewAIInc/crewAI/tree/main/lib/crewai/src/crewai",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "file_name": null,
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
+  },
+  {
+    "owner": "microsoft",
+    "package": "semantic-kernel-dotnet",
+    "language": "C#",
+    "url": "https://github.com/microsoft/semantic-kernel/tree/main/dotnet/src/SemanticKernel.Core",
+    "file_name": null,
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
+  },
+  {
+    "owner": "microsoft",
+    "package": "semantic-kernel-dotnet-google",
+    "language": "C#",
+    "url": "https://github.com/microsoft/semantic-kernel/tree/main/dotnet/src/Connectors/Connectors.Google",
+    "file_name": null,
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
+  },
+  {
+    "owner": "microsoft",
+    "package": "semantic-kernel-java",
+    "language": "Java",
+    "url": "https://github.com/microsoft/semantic-kernel-java/tree/main/semantickernel-api",
+    "exclude": [
+      "*/test/*"
+    ],
+    "file_name": null,
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
+  },
+  {
+    "owner": "livekit",
+    "package": "livekit-agents",
+    "language": "Python",
+    "url": "https://github.com/livekit/agents/tree/main/livekit-agents/livekit/agents",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "file_name": null,
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
+  },
+  {
+    "owner": "livekit",
+    "package": "livekit-plugins-google",
+    "language": "Python",
+    "url": "https://github.com/livekit/agents/tree/main/livekit-plugins/livekit-plugins-google/livekit/plugins/google",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "file_name": null,
+    "last_ingested": "Fri Mar 13 15:18:22 2026"
+  },
+  {
+    "owner": "agno-agi",
+    "package": "agno",
+    "language": "Python",
+    "url": "https://github.com/agno-agi/agno/tree/main/libs/agno/agno",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/0osr00tyc3ej-d93qk9xz11di",
+    "last_ingested": "Fri Mar 13 08:39:41 2026"
+  },
+  {
+    "owner": "firebase",
+    "package": "genkit-js-core",
+    "language": "TypeScript",
+    "url": "https://github.com/firebase/genkit/tree/main/js/core/src",
+    "exclude": [
+      "*/tests/*",
+      "*.test.ts",
+      "*/__fixtures__/*"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/jwkbqu0ydb7f-wfz26x0ewaf5",
+    "last_ingested": "Fri Mar 13 08:39:59 2026"
+  },
+  {
+    "owner": "firebase",
+    "package": "genkit-js-ai",
+    "language": "TypeScript",
+    "url": "https://github.com/firebase/genkit/tree/main/js/ai/src",
+    "exclude": [
+      "*/tests/*",
+      "*.test.ts",
+      "*/__fixtures__/*"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/edesvoqqljxn-f4ejf97139pm",
+    "last_ingested": "Fri Mar 13 08:40:16 2026"
+  },
+  {
+    "owner": "firebase",
+    "package": "genkit-js-google-genai",
+    "language": "TypeScript",
+    "url": "https://github.com/firebase/genkit/tree/main/js/plugins/google-genai/src",
+    "exclude": [
+      "*/tests/*",
+      "*.test.ts"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/y4x23md4ywpd-922y22uhxc8h",
+    "last_ingested": "Fri Mar 13 08:40:33 2026"
+  },
+  {
+    "owner": "firebase",
+    "package": "genkit-go",
+    "language": "Go",
+    "url": "https://github.com/firebase/genkit/tree/main/go/genkit",
+    "exclude": [
+      "*/*_test.go"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/ze67k4bnwcxe-3rels06otejz",
+    "last_ingested": "Fri Mar 13 08:40:50 2026"
+  },
+  {
+    "owner": "firebase",
+    "package": "genkit-go-google-genai",
+    "language": "Go",
+    "url": "https://github.com/firebase/genkit/tree/main/go/plugins/googlegenai",
+    "exclude": [
+      "*/*_test.go"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/w2e6mhve7hpa-mcf2p2kvh20m",
+    "last_ingested": "Fri Mar 13 08:41:07 2026"
+  },
+  {
+    "owner": "firebase",
+    "package": "genkit-py",
+    "language": "Python",
+    "url": "https://github.com/firebase/genkit/tree/main/py/packages/genkit",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/mw93vgewrcv1-97wlmq1aiiaq",
+    "last_ingested": "Fri Mar 13 08:41:27 2026"
+  },
+  {
+    "owner": "firebase",
+    "package": "genkit-py-google-genai",
+    "language": "Python",
+    "url": "https://github.com/firebase/genkit/tree/main/py/plugins/google-genai/src",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/1w2sc3yxuhst-iv99e5d6jej1",
+    "last_ingested": "Fri Mar 13 08:41:43 2026"
+  },
+  {
+    "owner": "microsoft",
+    "package": "autogen-core",
+    "language": "Python",
+    "url": "https://github.com/microsoft/autogen/tree/main/python/packages/autogen-core/src/autogen_core",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/mnbg4zbnkwmd-kf0chtow2r9d",
+    "last_ingested": "Fri Mar 13 08:51:26 2026"
+  },
+  {
+    "owner": "microsoft",
+    "package": "autogen-dotnet-core",
+    "language": "C#",
+    "url": "https://github.com/microsoft/autogen/tree/main/dotnet/src/AutoGen.Core",
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/uyqyt4tewfi5-p409rnfokpba",
+    "last_ingested": "Fri Mar 13 08:51:42 2026"
+  },
+  {
+    "owner": "microsoft",
+    "package": "autogen-dotnet-gemini",
+    "language": "C#",
+    "url": "https://github.com/microsoft/autogen/tree/main/dotnet/src/AutoGen.Gemini",
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/ztjvacvdquan-twbras5dxaym",
+    "last_ingested": "Fri Mar 13 08:51:56 2026"
+  },
+  {
+    "owner": "Upsonic",
+    "package": "Upsonic",
+    "language": "Python",
+    "url": "https://github.com/Upsonic/Upsonic/tree/master/src/upsonic",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/p7csilr4bixa-o35g4taov648",
+    "last_ingested": "Fri Mar 13 08:52:23 2026"
+  },
+  {
+    "owner": "yamadashy",
+    "package": "repomix",
+    "language": "TypeScript",
+    "url": "https://github.com/yamadashy/repomix/tree/main/src",
+    "exclude": [
+      "*/tests/*",
+      "*.test.ts"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/3z392dtoffl2-brr8atrjqlf6",
+    "last_ingested": "Fri Mar 13 08:52:40 2026"
+  },
+  {
+    "owner": "microsoft",
+    "package": "agent-framework-dotnet",
+    "language": "C#",
+    "url": "https://github.com/microsoft/agent-framework/tree/main/dotnet/src",
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/cs8x8swpt21p-f9q2hjtvqyd2",
+    "last_ingested": "Fri Mar 13 09:02:34 2026"
+  },
+  {
+    "owner": "CopilotKit",
+    "package": "CopilotKit-ts-google",
+    "language": "TypeScript",
+    "url": "https://github.com/CopilotKit/CopilotKit/tree/main/packages/v1/runtime/src/service-adapters/google",
+    "exclude": [
+      "*/tests/*",
+      "*.test.ts"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/filj7u1c8lgk-5vgxktrqprqq",
+    "last_ingested": "Fri Mar 13 09:12:05 2026"
+  },
+  {
+    "owner": "CopilotKit",
+    "package": "CopilotKit-py",
+    "language": "Python",
+    "url": "https://github.com/CopilotKit/CopilotKit/tree/main/sdk-python/copilotkit",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/60p490b1wvmn-5xsstkior80z",
+    "last_ingested": "Fri Mar 13 09:12:22 2026"
+  },
+  {
+    "owner": "mem0ai",
+    "package": "mem0",
+    "language": "Python",
+    "url": "https://github.com/mem0ai/mem0/tree/main/mem0",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/d1gffa0pq06u-e5mc43luia6k",
+    "last_ingested": "Fri Mar 13 09:12:39 2026"
+  },
+  {
+    "owner": "mem0ai",
+    "package": "mem0-ts",
+    "language": "TypeScript",
+    "url": "https://github.com/mem0ai/mem0/tree/main/mem0-ts/src",
+    "exclude": [
+      "*/tests/*",
+      "*.test.ts"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/f3yaeqorb481-7h5bm9on98ex",
+    "last_ingested": "Fri Mar 13 09:12:54 2026"
+  },
+  {
+    "owner": "openai",
+    "package": "swarm",
+    "language": "Python",
+    "url": "https://github.com/openai/swarm/tree/main/swarm",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/vulvkt7pim75-selgpxzo0q9g",
+    "last_ingested": "Fri Mar 13 09:13:08 2026"
+  },
+  {
+    "owner": "openai",
+    "package": "openai-agents",
+    "language": "Python",
+    "url": "https://github.com/openai/openai-agents-python/tree/main/src/agents",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/kiqcjqpjswwm-938jp298eu3e",
+    "last_ingested": "Fri Mar 13 09:22:54 2026"
+  },
+  {
+    "owner": "camel-ai",
+    "package": "camel",
+    "language": "Python",
+    "url": "https://github.com/camel-ai/camel/tree/master/camel",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/r1ldqlc2lfh3-iysxf9t2ak1w",
+    "last_ingested": "Fri Mar 13 09:23:19 2026"
   }
 ]
