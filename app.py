@@ -135,8 +135,15 @@ def ingest(update=False):
                     config={'display_name': pkg_name}
                 )
                 
-                print(f"  File uploaded to {uploaded_file.name}. Waiting before importing to store...")
-                time.sleep(15) # Give the backend time to process the file (count tokens, etc.)
+                print(f"  File uploaded to {uploaded_file.name}. Waiting for file processing...")
+                while uploaded_file.state == "PROCESSING":
+                    print(".", end="", flush=True)
+                    time.sleep(2)
+                    uploaded_file = client.files.get(name=uploaded_file.name)
+                print() # newline after dots
+                
+                if uploaded_file.state == "FAILED":
+                    raise Exception(f"File processing failed for {uploaded_file.name}")
                 
                 # Step 2: Import the file into the File Search Store with metadata
                 operation = client.file_search_stores.import_file(
