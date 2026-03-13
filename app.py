@@ -4,6 +4,7 @@ import os
 import subprocess
 import time
 import yaml
+import gitingest
 from google import genai
 from google.genai import types
 
@@ -100,13 +101,13 @@ def ingest(update=False):
         
         # Run gitingest
         print(f"Downloading and processing with gitingest from {pkg['url']}...")
-        cmd = ["gitingest", pkg["url"], "-o", filename]
+        exclude_patterns = set(pkg["exclude"]) if "exclude" in pkg else None
         
-        if "exclude" in pkg:
-            for pattern in pkg["exclude"]:
-                cmd.extend(["-e", pattern])
-                
-        subprocess.run(cmd, check=True)
+        gitingest.ingest(
+            source=pkg["url"],
+            exclude_patterns=exclude_patterns,
+            output=filename
+        )
         
         # Read the file and prepend metadata
         with open(filename, "r", encoding="utf-8") as f:
