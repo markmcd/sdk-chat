@@ -212,8 +212,8 @@ def ingest(update=False):
             pkg_entry["last_ingested"] = time.ctime()
             db[pkg_name] = pkg_entry
         
-    with open(PACKAGES_DB, "w") as f:
-        json.dump(list(db.values()), f, indent=2)
+            with open(PACKAGES_DB, "w") as f:
+                json.dump(list(db.values()), f, indent=2)
         
     print("\nIngestion process complete!")
 
