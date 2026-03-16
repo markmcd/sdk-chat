@@ -75,15 +75,15 @@ def ingest(update=False):
         # If it's already in the DB and we have a file_name, we're definitely done.
         # If we have a pending_operation_name, we should resume polling.
         if pkg_name in db and not update:
-            if db[pkg_name].get("file_name"):
-                print(f"Skipping {pkg_name} (already indexed). Use --update to refresh.")
-                continue
-            elif db[pkg_name].get("pending_operation_name"):
+            if db[pkg_name].get("pending_operation_name"):
                 print(f"Resuming indexing for {pkg_name} from previous session...")
                 # Create a placeholder operation object
                 dummy_op = types.UploadToFileSearchStoreOperation(name=db[pkg_name]["pending_operation_name"])
                 op = client.operations.get(dummy_op)
-                pending_operations.append((pkg_name, pkg, op, None))
+                pending_operations.append((pkg_name, pkg, op, None, db[pkg_name].get("file_name")))
+                continue
+            elif db[pkg_name].get("file_name"):
+                print(f"Skipping {pkg_name} (already indexed). Use --update to refresh.")
                 continue
 
         print(f"\n--- {'Updating' if update else 'Ingesting'} {pkg_name} ---")
@@ -177,16 +177,17 @@ def ingest(update=False):
         # IMMEDIATELY save the operation name to the local DB so we don't lose it if we crash
         pkg_entry = pkg.copy()
         pkg_entry["pending_operation_name"] = operation.name
+        pkg_entry["file_name"] = uploaded_file.name
         pkg_entry["last_ingested"] = time.ctime()
         db[pkg_name] = pkg_entry
         with open(PACKAGES_DB, "w") as f:
             json.dump(list(db.values()), f, indent=2)
 
-        pending_operations.append((pkg_name, pkg, operation, unique_filename))
+        pending_operations.append((pkg_name, pkg, operation, unique_filename, uploaded_file.name))
         
     if pending_operations:
         print("\nWaiting for all indexing operations to complete on the Gemini backend...")
-        for pkg_name, pkg, operation, unique_filename in pending_operations:
+        for pkg_name, pkg, operation, unique_filename, uploaded_file_name in pending_operations:
             print(f"Waiting for {pkg_name} to finish indexing...")
             while not operation.done:
                 time.sleep(5)
@@ -199,13 +200,6 @@ def ingest(update=False):
             if unique_filename and os.path.exists(unique_filename):
                 os.remove(unique_filename)
 
-            # Extract file name from the operation result
-            uploaded_file_name = None
-            # Based on typical google-genai response structure for this operation
-            if hasattr(operation, 'response') and operation.response:
-                 if hasattr(operation.response, 'name'):
-                     uploaded_file_name = operation.response.name
-            
             # Update local DB entry
             pkg_entry = pkg.copy()
             pkg_entry["file_name"] = uploaded_file_name
