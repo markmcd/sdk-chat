@@ -91,11 +91,26 @@ def ingest(update=False):
         # If updating, delete the old file
         if update and pkg_name in db and db[pkg_name].get("file_name"):
             old_file_id = db[pkg_name]["file_name"]
-            print(f"Removing old version of {pkg_name} ({old_file_id})...")
+            
+            # Remove the document from the file search store
+            if db[pkg_name].get("pending_operation_name"):
+                op_name = db[pkg_name]["pending_operation_name"]
+                # Document name corresponds to the operation name but with /documents/ instead of /operations/
+                doc_name = op_name.replace("/operations/", "/documents/")
+                print(f"Removing old version of {pkg_name} from store ({doc_name})...")
+                try:
+                    client.file_search_stores.documents.delete(
+                        name=doc_name,
+                        config={'force': True}
+                    )
+                except Exception as e:
+                    print(f"Warning: Could not delete old document from store: {e}")
+
+            print(f"Cleaning up temporary file ({old_file_id})...")
             try:
                 client.files.delete(name=old_file_id)
             except Exception as e:
-                print(f"Warning: Could not delete old file: {e}")
+                print(f"Warning: Could not delete old temporary file: {e}")
 
         filename = f"{pkg_name}.txt"
         
