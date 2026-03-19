@@ -269,6 +269,60 @@ def run_ask():
     args = parser.parse_args()
     ask(args.query)
 
+def clean(delete=False):
+    client = init_client()
+    if not os.path.exists(STORE_NAME_FILE):
+        print("No store found.")
+        return
+        
+    with open(STORE_NAME_FILE, "r") as f:
+        store_name = f.read().strip()
+        
+    db = {}
+    if os.path.exists(PACKAGES_DB):
+        with open(PACKAGES_DB, "r") as f:
+            try:
+                existing_list = json.load(f)
+                db = {pkg["package"]: pkg for pkg in existing_list}
+            except json.JSONDecodeError:
+                db = {}
+                
+    active_docs = set()
+    for pkg in db.values():
+        if pkg.get("pending_operation_name"):
+            op_name = pkg["pending_operation_name"]
+            doc_name = op_name.replace("/operations/", "/documents/")
+            active_docs.add(doc_name)
+            
+    print(f"Checking store {store_name} for orphaned documents...")
+    all_docs = list(client.file_search_stores.documents.list(parent=store_name))
+    orphaned_docs = [doc for doc in all_docs if doc.name not in active_docs]
+    
+    if not orphaned_docs:
+        print("No orphaned documents found.")
+        return
+        
+    print(f"Found {len(orphaned_docs)} orphaned documents:")
+    for doc in orphaned_docs:
+        print(f" - {doc.name} ({getattr(doc, 'display_name', 'Unknown')})")
+        
+    if delete:
+        print("\nDeleting orphaned documents...")
+        for doc in orphaned_docs:
+            try:
+                client.file_search_stores.documents.delete(name=doc.name, config={'force': True})
+                print(f"Deleted {doc.name}")
+            except Exception as e:
+                print(f"Failed to delete {doc.name}: {e}")
+    else:
+        print("\nRun with --delete to remove them.")
+
+def run_clean():
+    parser = argparse.ArgumentParser(description="Check for and optionally delete orphaned documents in the store")
+    parser.add_argument("--delete", action="store_true", help="Delete orphaned documents")
+    args = parser.parse_args()
+    clean(delete=args.delete)
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="AI SDK Document Ingestion and Query App")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -278,6 +332,9 @@ if __name__ == "__main__":
     
     ask_parser = subparsers.add_parser("ask", help="Ask a question against the built index")
     ask_parser.add_argument("query", type=str, help="The question to ask")
+
+    clean_parser = subparsers.add_parser("clean", help="Check for and optionally delete orphaned documents in the store")
+    clean_parser.add_argument("--delete", action="store_true", help="Delete orphaned documents")
     
     args = parser.parse_args()
     
@@ -285,3 +342,5 @@ if __name__ == "__main__":
         ingest(update=args.update)
     elif args.command == "ask":
         ask(args.query)
+    elif args.command == "clean":
+        clean(delete=args.delete)

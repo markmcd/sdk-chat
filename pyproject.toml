@@ -12,6 +12,7 @@ dependencies = [
 [project.scripts]
 ingest = "app:run_ingest"
 ask = "app:run_ask"
+clean = "app:run_clean"
 
 [build-system]
 requires = ["hatchling"]
