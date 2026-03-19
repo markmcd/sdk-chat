@@ -1,4 +1,5 @@
 import argparse
+import datetime
 import json
 import os
 import subprocess
@@ -53,10 +54,28 @@ def get_store(client):
         f.write(store.name)
     return store.name
 
-def ingest(update=False):
+def ingest(update=False, since=None):
     client = init_client()
     store_name = get_store(client)
     
+    since_dt = None
+    if since:
+        unit = since[-1]
+        try:
+            value = int(since[:-1])
+            if unit == 'h':
+                delta = datetime.timedelta(hours=value)
+            elif unit == 'd':
+                delta = datetime.timedelta(days=value)
+            elif unit == 'm':
+                delta = datetime.timedelta(minutes=value)
+            else:
+                raise ValueError("Unit must be h, d, or m")
+            since_dt = datetime.datetime.now() - delta
+        except Exception as e:
+            print(f"Error parsing --since argument: {e}")
+            exit(1)
+
     # Load existing DB
     db = {}
     if os.path.exists(PACKAGES_DB):
@@ -74,17 +93,31 @@ def ingest(update=False):
         
         # If it's already in the DB and we have a file_name, we're definitely done.
         # If we have a pending_operation_name, we should resume polling.
-        if pkg_name in db and not update:
-            if db[pkg_name].get("pending_operation_name"):
-                print(f"Resuming indexing for {pkg_name} from previous session...")
-                # Create a placeholder operation object
-                dummy_op = types.UploadToFileSearchStoreOperation(name=db[pkg_name]["pending_operation_name"])
-                op = client.operations.get(dummy_op)
-                pending_operations.append((pkg_name, pkg, op, None, db[pkg_name].get("file_name")))
-                continue
-            elif db[pkg_name].get("file_name"):
-                print(f"Skipping {pkg_name} (already indexed). Use --update to refresh.")
-                continue
+        if pkg_name in db:
+            is_recent = False
+            if update and since_dt and db[pkg_name].get("last_ingested"):
+                try:
+                    last_time = time.strptime(db[pkg_name]["last_ingested"])
+                    last_dt = datetime.datetime.fromtimestamp(time.mktime(last_time))
+                    if last_dt > since_dt:
+                        is_recent = True
+                except ValueError:
+                    pass
+
+            if not update or is_recent:
+                if db[pkg_name].get("pending_operation_name") and not is_recent:
+                    print(f"Resuming indexing for {pkg_name} from previous session...")
+                    # Create a placeholder operation object
+                    dummy_op = types.UploadToFileSearchStoreOperation(name=db[pkg_name]["pending_operation_name"])
+                    op = client.operations.get(dummy_op)
+                    pending_operations.append((pkg_name, pkg, op, None, db[pkg_name].get("file_name")))
+                    continue
+                elif db[pkg_name].get("file_name"):
+                    if is_recent:
+                        print(f"Skipping {pkg_name} (updated within {since}).")
+                    else:
+                        print(f"Skipping {pkg_name} (already indexed). Use --update to refresh.")
+                    continue
 
         print(f"\n--- {'Updating' if update else 'Ingesting'} {pkg_name} ---")
         
@@ -260,8 +293,9 @@ def ask(query):
 def run_ingest():
     parser = argparse.ArgumentParser(description="Ingest repositories and build index")
     parser.add_argument("--update", action="store_true", help="Force update of existing packages")
+    parser.add_argument("--since", type=str, help="Only update packages older than this (e.g., 24h, 1d)")
     args = parser.parse_args()
-    ingest(update=args.update)
+    ingest(update=args.update, since=args.since)
 
 def run_ask():
     parser = argparse.ArgumentParser(description="Ask a question against the built index")
@@ -329,6 +363,7 @@ if __name__ == "__main__":
     
     ingest_parser = subparsers.add_parser("ingest", help="Ingest repositories and build index")
     ingest_parser.add_argument("--update", action="store_true", help="Force update of existing packages")
+    ingest_parser.add_argument("--since", type=str, help="Only update packages older than this (e.g., 24h, 1d)")
     
     ask_parser = subparsers.add_parser("ask", help="Ask a question against the built index")
     ask_parser.add_argument("query", type=str, help="The question to ask")
@@ -339,7 +374,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     if args.command == "ingest":
-        ingest(update=args.update)
+        ingest(update=args.update, since=args.since)
     elif args.command == "ask":
         ask(args.query)
     elif args.command == "clean":
