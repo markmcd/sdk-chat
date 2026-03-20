@@ -51,7 +51,7 @@
   package: litellm
   language: Python
   url: https://github.com/BerriAI/litellm/tree/main/litellm
-  exclude: ["*/tests/*", "*.pyc", "__pycache__", "*/ui/*", "*/proxy/*"]
+  exclude: ["*/tests/*", "*.pyc", "__pycache__", "*/ui/*", "*/proxy/*", "*/litellm_core_utils/tokenizers/*"]
 - owner: chroma-core
   package: chromadb
   language: Python
