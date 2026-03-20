@@ -13,6 +13,7 @@ STORE_NAME_FILE = ".store_name"
 PACKAGES_DB = "packages.json"
 PACKAGES_YAML = "packages.yaml"
 SYSTEM_PROMPT_FILE = "system_prompt.txt"
+FAILED_PACKAGES_FILE = "failed_packages.json"
 
 def load_system_prompt():
     if os.path.exists(SYSTEM_PROMPT_FILE):
@@ -58,6 +59,17 @@ def ingest(update=False, since=None):
     client = init_client()
     store_name = get_store(client)
     
+    failed_packages = set()
+    if os.path.exists(FAILED_PACKAGES_FILE):
+        with open(FAILED_PACKAGES_FILE, "r") as f:
+            try:
+                failed_packages = set(json.load(f))
+            except json.JSONDecodeError:
+                pass
+                
+    # Sort PACKAGES to put failed ones at the end
+    sorted_packages = sorted(PACKAGES, key=lambda p: p["package"] in failed_packages)
+    
     since_dt = None
     if since:
         unit = since[-1]
@@ -88,7 +100,7 @@ def ingest(update=False, since=None):
     
     pending_operations = []
     
-    for pkg in PACKAGES:
+    for pkg in sorted_packages:
         pkg_name = pkg["package"]
         
         # If it's already in the DB and we have a file_name, we're definitely done.
@@ -151,11 +163,18 @@ def ingest(update=False, since=None):
         print(f"Downloading and processing with gitingest from {pkg['url']}...")
         exclude_patterns = set(pkg["exclude"]) if "exclude" in pkg else None
         
-        gitingest.ingest(
-            source=pkg["url"],
-            exclude_patterns=exclude_patterns,
-            output=filename
-        )
+        try:
+            gitingest.ingest(
+                source=pkg["url"],
+                exclude_patterns=exclude_patterns,
+                output=filename
+            )
+        except Exception as e:
+            print(f"  FAILED to process {pkg_name} with gitingest: {e}")
+            failed_packages.add(pkg_name)
+            with open(FAILED_PACKAGES_FILE, "w") as f:
+                json.dump(list(failed_packages), f, indent=2)
+            continue
         
         # Read the file and prepend metadata
         with open(filename, "r", encoding="utf-8") as f:
@@ -167,7 +186,7 @@ def ingest(update=False, since=None):
         print(f"Uploading {pkg_name} to File Search Store {store_name}...")
         
         # Retry logic for upload
-        max_retries = 5
+        max_retries = 3
         operation = None
         unique_filename = ""
         for attempt in range(max_retries):
@@ -220,7 +239,15 @@ def ingest(update=False, since=None):
                     operation = None
                     
         if operation is None:
+            failed_packages.add(pkg_name)
+            with open(FAILED_PACKAGES_FILE, "w") as f:
+                json.dump(list(failed_packages), f, indent=2)
             continue
+            
+        if pkg_name in failed_packages:
+            failed_packages.remove(pkg_name)
+            with open(FAILED_PACKAGES_FILE, "w") as f:
+                json.dump(list(failed_packages), f, indent=2)
                     
         # IMMEDIATELY save the operation name to the local DB so we don't lose it if we crash
         pkg_entry = pkg.copy()
