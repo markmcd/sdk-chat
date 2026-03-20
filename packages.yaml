@@ -23,10 +23,12 @@
   language: TypeScript
   url: https://github.com/vercel/ai/tree/main/packages/google
   exclude:
-    - "*/__fixtures__/*"
-    - "*/__snapshots__/*"
-    - "*.test.ts"
-    - "*.json"
+    - "**/__fixtures__/**"
+    - "**/__snapshots__/**"
+    - "**/*.test.ts"
+    - "**/*.json"
+    - "**/__fixtures__/*"
+    - "packages/google/src/__fixtures__/*"
 - owner: lancedb
   package: lancedb
   language: Python
