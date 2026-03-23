@@ -489,5 +489,22 @@
     ],
     "file_name": "files/r1j2xf19k6e0",
     "last_ingested": "Mon Mar 23 11:03:32 2026"
+  },
+  {
+    "owner": "BerriAI",
+    "package": "litellm",
+    "language": "Python",
+    "url": "https://github.com/BerriAI/litellm/tree/main/litellm",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__",
+      "*/ui/*",
+      "*/proxy/*",
+      "*/litellm_core_utils/tokenizers/*",
+      "*/llms/huggingface/huggingface_llms_metadata/*"
+    ],
+    "file_name": "files/uv8cjp8uvamd",
+    "last_ingested": "Mon Mar 23 12:00:22 2026"
   }
 ]

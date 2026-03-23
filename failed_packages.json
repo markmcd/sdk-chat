@@ -1,8 +1,7 @@
 [
-  "CopilotKit-ts",
-  "mastra-core",
   "agent-framework-python",
   "pymilvus",
-  "litellm",
-  "letta"
+  "letta",
+  "mastra-core",
+  "CopilotKit-ts"
 ]
