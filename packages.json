@@ -124,12 +124,13 @@
     "language": "Python",
     "url": "https://github.com/browser-use/browser-use/tree/main/browser_use",
     "exclude": [
+      "browser_use/llm/vercel/chat.py",
       "*/tests/*",
       "*.pyc",
       "__pycache__"
     ],
-    "file_name": null,
-    "last_ingested": "Fri Mar 13 15:18:22 2026"
+    "file_name": "files/p9n85zjz9nqj",
+    "last_ingested": "Mon Mar 23 11:02:05 2026"
   },
   {
     "owner": "pinecone-io",
@@ -472,5 +473,21 @@
     ],
     "file_name": "files/unqh086viy7y",
     "last_ingested": "Thu Mar 19 18:37:11 2026"
+  },
+  {
+    "owner": "vercel",
+    "package": "vercel-ai-sdk-google",
+    "language": "TypeScript",
+    "url": "https://github.com/vercel/ai/tree/main/packages/google",
+    "exclude": [
+      "**/__fixtures__/**",
+      "**/__snapshots__/**",
+      "**/*.test.ts",
+      "**/*.json",
+      "**/__fixtures__/*",
+      "packages/google/src/__fixtures__/*"
+    ],
+    "file_name": "files/r1j2xf19k6e0",
+    "last_ingested": "Mon Mar 23 11:03:32 2026"
   }
 ]

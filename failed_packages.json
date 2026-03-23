@@ -1,10 +1,8 @@
 [
-  "agent-framework-python",
-  "mastra-core",
   "CopilotKit-ts",
+  "mastra-core",
+  "agent-framework-python",
+  "pymilvus",
   "litellm",
-  "browser-use",
-  "vercel-ai-sdk-google",
-  "letta",
-  "pymilvus"
+  "letta"
 ]

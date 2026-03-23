@@ -68,7 +68,12 @@
   package: browser-use
   language: Python
   url: https://github.com/browser-use/browser-use/tree/main/browser_use
-  exclude: ["*/tests/*", "*.pyc", "__pycache__"]
+  exclude:
+    # Temporarily exclude vercel/chat.py due to b/492380698
+    - "browser_use/llm/vercel/chat.py"
+    - "*/tests/*"
+    - "*.pyc"
+    - "__pycache__"
 - owner: pinecone-io
   package: pinecone
   language: Python
