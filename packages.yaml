@@ -53,7 +53,7 @@
   package: litellm
   language: Python
   url: https://github.com/BerriAI/litellm/tree/main/litellm
-  exclude: ["*/tests/*", "*.pyc", "__pycache__", "*/ui/*", "*/proxy/*", "*/litellm_core_utils/tokenizers/*"]
+  exclude: ["*/tests/*", "*.pyc", "__pycache__", "*/ui/*", "*/proxy/*", "*/litellm_core_utils/tokenizers/*", "*/llms/huggingface/huggingface_llms_metadata/*"]
 - owner: chroma-core
   package: chromadb
   language: Python
@@ -88,7 +88,7 @@
   package: pymilvus
   language: Python
   url: https://github.com/milvus-io/pymilvus/tree/master/pymilvus
-  exclude: ["*/tests/*", "*.pyc", "__pycache__"]
+  exclude: ["*/tests/*", "*.pyc", "__pycache__", "**/grpc_gen/**"]
 
 - owner: crewAIInc
   package: crewAI
@@ -194,6 +194,8 @@
   exclude:
     - '*/tests/*'
     - '*.test.ts'
+    - '**/__recordings__/**'
+    - '**/__recordings__/*'
 - owner: microsoft
   package: autogen-core
   language: Python
@@ -233,6 +235,9 @@
     - '*/tests/*'
     - '*.pyc'
     - __pycache__
+    - 'python/packages/devui/agent_framework_devui/ui/assets/*'
+    - '**/tsconfig.node.tsbuildinfo'
+    - '**/tsconfig.tsbuildinfo'
 - owner: microsoft
   package: agent-framework-dotnet
   language: C#
@@ -245,6 +250,7 @@
     - '*/tests/*'
     - '*.test.ts'
     - '*/__fixtures__/*'
+    - '**/icons.tsx'
 - owner: CopilotKit
   package: CopilotKit-ts-google
   language: TypeScript
@@ -291,6 +297,8 @@
     - '*/tests/*'
     - '*.pyc'
     - __pycache__
+    # Temporarily blocked for b/492380698
+    - 'letta/interfaces/openai_streaming_interface.py'
 - owner: openai
   package: openai-agents
   language: Python
