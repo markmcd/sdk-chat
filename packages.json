@@ -506,5 +506,77 @@
     ],
     "file_name": "files/uv8cjp8uvamd",
     "last_ingested": "Mon Mar 23 12:00:22 2026"
+  },
+  {
+    "owner": "microsoft",
+    "package": "agent-framework-python",
+    "language": "Python",
+    "url": "https://github.com/microsoft/agent-framework/tree/main/python",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__",
+      "python/packages/devui/agent_framework_devui/ui/assets/*",
+      "**/tsconfig.node.tsbuildinfo",
+      "**/tsconfig.tsbuildinfo"
+    ],
+    "file_name": "files/zoxcnhf8208j",
+    "last_ingested": "Mon Mar 23 14:53:28 2026"
+  },
+  {
+    "owner": "letta-ai",
+    "package": "letta",
+    "language": "Python",
+    "url": "https://github.com/letta-ai/letta/tree/main/letta",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__",
+      "letta/interfaces/openai_streaming_interface.py"
+    ],
+    "file_name": "files/jl2451fg4pua",
+    "last_ingested": "Mon Mar 23 16:08:10 2026"
+  },
+  {
+    "owner": "CopilotKit",
+    "package": "CopilotKit-ts",
+    "language": "TypeScript",
+    "url": "https://github.com/CopilotKit/CopilotKit/tree/main/packages",
+    "exclude": [
+      "*/tests/*",
+      "*.test.ts",
+      "*/__fixtures__/*",
+      "**/icons.tsx"
+    ],
+    "file_name": "files/zgfl9eukvdtr",
+    "last_ingested": "Mon Mar 23 16:15:25 2026"
+  },
+  {
+    "owner": "milvus-io",
+    "package": "pymilvus",
+    "language": "Python",
+    "url": "https://github.com/milvus-io/pymilvus/tree/master/pymilvus",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__",
+      "**/grpc_gen/**"
+    ],
+    "file_name": "files/aoj4w59g76p5",
+    "last_ingested": "Mon Mar 23 16:34:12 2026"
+  },
+  {
+    "owner": "mastra-ai",
+    "package": "mastra-core",
+    "language": "TypeScript",
+    "url": "https://github.com/mastra-ai/mastra/tree/main/packages/core",
+    "exclude": [
+      "*/tests/*",
+      "*.test.ts",
+      "**/__recordings__/**",
+      "**/__recordings__/*"
+    ],
+    "file_name": "files/orfcusiicqnu",
+    "last_ingested": "Mon Mar 23 16:58:52 2026"
   }
 ]
