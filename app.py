@@ -55,7 +55,7 @@ def get_store(client):
         f.write(store.name)
     return store.name
 
-def ingest(update=False, since=None):
+def ingest(update=False, since=None, package=None):
     client = init_client()
     store_name = get_store(client)
     
@@ -69,6 +69,12 @@ def ingest(update=False, since=None):
                 
     # Sort PACKAGES to put failed ones at the end
     sorted_packages = sorted(PACKAGES, key=lambda p: p["package"] in failed_packages)
+    
+    if package:
+        sorted_packages = [p for p in sorted_packages if p["package"] == package]
+        if not sorted_packages:
+            print(f"Error: Package '{package}' not found in {PACKAGES_YAML}")
+            return
     
     since_dt = None
     if since:
@@ -321,8 +327,9 @@ def run_ingest():
     parser = argparse.ArgumentParser(description="Ingest repositories and build index")
     parser.add_argument("--update", action="store_true", help="Force update of existing packages")
     parser.add_argument("--since", type=str, help="Only update packages older than this (e.g., 24h, 1d)")
+    parser.add_argument("--package", type=str, help="Only ingest/update this specific package")
     args = parser.parse_args()
-    ingest(update=args.update, since=args.since)
+    ingest(update=args.update, since=args.since, package=args.package)
 
 def run_ask():
     parser = argparse.ArgumentParser(description="Ask a question against the built index")
@@ -391,6 +398,7 @@ if __name__ == "__main__":
     ingest_parser = subparsers.add_parser("ingest", help="Ingest repositories and build index")
     ingest_parser.add_argument("--update", action="store_true", help="Force update of existing packages")
     ingest_parser.add_argument("--since", type=str, help="Only update packages older than this (e.g., 24h, 1d)")
+    ingest_parser.add_argument("--package", type=str, help="Only ingest/update this specific package")
     
     ask_parser = subparsers.add_parser("ask", help="Ask a question against the built index")
     ask_parser.add_argument("query", type=str, help="The question to ask")
@@ -401,7 +409,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     if args.command == "ingest":
-        ingest(update=args.update, since=args.since)
+        ingest(update=args.update, since=args.since, package=args.package)
     elif args.command == "ask":
         ask(args.query)
     elif args.command == "clean":
