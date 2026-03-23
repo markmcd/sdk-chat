@@ -141,9 +141,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/s6sf8aeczlwo-866ww70axlyi",
     "file_name": "files/s6sf8aeczlwo",
-    "last_ingested": "Thu Mar 19 14:11:13 2026"
+    "last_ingested": "Fri Mar 20 21:52:29 2026"
   },
   {
     "owner": "weaviate",
@@ -155,9 +154,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/pnd56ghiaqlf-y0c5bq1d68ba",
     "file_name": "files/pnd56ghiaqlf",
-    "last_ingested": "Thu Mar 19 14:11:57 2026"
+    "last_ingested": "Fri Mar 20 21:52:29 2026"
   },
   {
     "owner": "crewAIInc",
@@ -169,27 +167,24 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/ym6vv8js1zj4-jriwkjfqsren",
     "file_name": "files/ym6vv8js1zj4",
-    "last_ingested": "Thu Mar 19 14:21:30 2026"
+    "last_ingested": "Fri Mar 20 21:52:29 2026"
   },
   {
     "owner": "microsoft",
     "package": "semantic-kernel-dotnet",
     "language": "C#",
     "url": "https://github.com/microsoft/semantic-kernel/tree/main/dotnet/src/SemanticKernel.Core",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/x6scoszmf4nv-ftqg276y7193",
     "file_name": "files/x6scoszmf4nv",
-    "last_ingested": "Thu Mar 19 14:21:51 2026"
+    "last_ingested": "Fri Mar 20 21:52:29 2026"
   },
   {
     "owner": "microsoft",
     "package": "semantic-kernel-dotnet-google",
     "language": "C#",
     "url": "https://github.com/microsoft/semantic-kernel/tree/main/dotnet/src/Connectors/Connectors.Google",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/juz1q93cyitt-ciows6sqmyz8",
     "file_name": "files/juz1q93cyitt",
-    "last_ingested": "Thu Mar 19 14:22:10 2026"
+    "last_ingested": "Fri Mar 20 21:52:29 2026"
   },
   {
     "owner": "microsoft",
@@ -199,9 +194,8 @@
     "exclude": [
       "*/test/*"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/7qv2snveh0dx-wbcx9rh8cpth",
     "file_name": "files/7qv2snveh0dx",
-    "last_ingested": "Thu Mar 19 14:22:29 2026"
+    "last_ingested": "Fri Mar 20 21:52:29 2026"
   },
   {
     "owner": "livekit",
@@ -213,9 +207,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/4szi6mosk08x-h5c0cr40vxgo",
     "file_name": "files/4szi6mosk08x",
-    "last_ingested": "Thu Mar 19 14:22:48 2026"
+    "last_ingested": "Fri Mar 20 21:52:29 2026"
   },
   {
     "owner": "livekit",
@@ -227,9 +220,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/ca1f2i3828n6-mzalziraegvb",
     "file_name": "files/ca1f2i3828n6",
-    "last_ingested": "Thu Mar 19 14:23:13 2026"
+    "last_ingested": "Fri Mar 20 21:52:29 2026"
   },
   {
     "owner": "agno-agi",
@@ -241,9 +233,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/vdtuxoesht4x-130vo785u0xj",
     "file_name": "files/vdtuxoesht4x",
-    "last_ingested": "Thu Mar 19 14:23:57 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "firebase",
@@ -255,9 +246,8 @@
       "*.test.ts",
       "*/__fixtures__/*"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/tz948c6vrtjc-jditifwwnu64",
     "file_name": "files/tz948c6vrtjc",
-    "last_ingested": "Thu Mar 19 14:24:27 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "firebase",
@@ -269,9 +259,8 @@
       "*.test.ts",
       "*/__fixtures__/*"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/dycfk9pstqpb-rggnl8suuztn",
     "file_name": "files/dycfk9pstqpb",
-    "last_ingested": "Thu Mar 19 14:24:47 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "firebase",
@@ -282,9 +271,8 @@
       "*/tests/*",
       "*.test.ts"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/c0eqlsqo2zkf-ry2go532bg6c",
     "file_name": "files/c0eqlsqo2zkf",
-    "last_ingested": "Thu Mar 19 14:25:15 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "firebase",
@@ -294,9 +282,8 @@
     "exclude": [
       "*/*_test.go"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/5gbdyjcnb0qh-4u7qquho1fk0",
     "file_name": "files/5gbdyjcnb0qh",
-    "last_ingested": "Thu Mar 19 14:25:40 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "firebase",
@@ -306,9 +293,8 @@
     "exclude": [
       "*/*_test.go"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/eh541w1opktg-udavgthtr83w",
     "file_name": "files/eh541w1opktg",
-    "last_ingested": "Thu Mar 19 14:26:01 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "firebase",
@@ -320,9 +306,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/5te5nyp88amg-t7zkhjvqkvgi",
     "file_name": "files/5te5nyp88amg",
-    "last_ingested": "Thu Mar 19 14:26:21 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "firebase",
@@ -334,9 +319,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/3bzaw5zoug12-rdpzmij0qelw",
     "file_name": "files/3bzaw5zoug12",
-    "last_ingested": "Thu Mar 19 14:26:41 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "microsoft",
@@ -348,27 +332,24 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/e1da6oo1lz3f-9w2z4jv80e8c",
     "file_name": "files/e1da6oo1lz3f",
-    "last_ingested": "Thu Mar 19 14:36:27 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "microsoft",
     "package": "autogen-dotnet-core",
     "language": "C#",
     "url": "https://github.com/microsoft/autogen/tree/main/dotnet/src/AutoGen.Core",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/puprdvtkd5tg-doszwxp6jr43",
     "file_name": "files/puprdvtkd5tg",
-    "last_ingested": "Thu Mar 19 14:36:45 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "microsoft",
     "package": "autogen-dotnet-gemini",
     "language": "C#",
     "url": "https://github.com/microsoft/autogen/tree/main/dotnet/src/AutoGen.Gemini",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/ftfdl63e7bl6-zzsqeet8yypr",
     "file_name": "files/ftfdl63e7bl6",
-    "last_ingested": "Thu Mar 19 14:37:02 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "Upsonic",
@@ -380,9 +361,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/y9u4nwfjq6ba-15n3eb176rno",
     "file_name": "files/y9u4nwfjq6ba",
-    "last_ingested": "Thu Mar 19 14:37:33 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "yamadashy",
@@ -393,18 +373,16 @@
       "*/tests/*",
       "*.test.ts"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/i9sxky1f0yt1-zwtuzjthz9pi",
     "file_name": "files/i9sxky1f0yt1",
-    "last_ingested": "Thu Mar 19 14:37:54 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "microsoft",
     "package": "agent-framework-dotnet",
     "language": "C#",
     "url": "https://github.com/microsoft/agent-framework/tree/main/dotnet/src",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/07tv5241cnjk-308l0q026w7j",
     "file_name": "files/07tv5241cnjk",
-    "last_ingested": "Thu Mar 19 14:47:53 2026"
+    "last_ingested": "Sat Mar 21 03:44:45 2026"
   },
   {
     "owner": "CopilotKit",
