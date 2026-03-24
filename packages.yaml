@@ -23,81 +23,115 @@
   language: TypeScript
   url: https://github.com/vercel/ai/tree/main/packages/google
   exclude:
-    - "**/__fixtures__/**"
-    - "**/__snapshots__/**"
-    - "**/*.test.ts"
-    - "**/*.json"
-    - "**/__fixtures__/*"
-    - "packages/google/src/__fixtures__/*"
+  - '**/__fixtures__/**'
+  - '**/__snapshots__/**'
+  - '**/*.test.ts'
+  - '**/*.json'
+  - '**/__fixtures__/*'
+  - packages/google/src/__fixtures__/*
 - owner: lancedb
   package: lancedb
   language: Python
   url: https://github.com/lancedb/lancedb/tree/main/python
-  exclude: ["*/tests/*", "*.pyc", "__pycache__"]
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: microsoft
   package: semantic-kernel
   language: Python
   url: https://github.com/microsoft/semantic-kernel/tree/main/python/semantic_kernel
-  exclude: ["*/tests/*", "*.pyc", "__pycache__", "*/samples/*"]
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+  - '*/samples/*'
 - owner: langchain-ai
   package: langchain-google-vertexai
   language: Python
   url: https://github.com/langchain-ai/langchain-google/tree/main/libs/vertexai
-  exclude: ["*/tests/*", "*.pyc", "__pycache__"]
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: pydantic
   package: pydantic-ai
   language: Python
   url: https://github.com/pydantic/pydantic-ai/tree/main/pydantic_ai_slim/pydantic_ai
-  exclude: ["*/tests/*", "*.pyc", "__pycache__"]
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: BerriAI
   package: litellm
   language: Python
   url: https://github.com/BerriAI/litellm/tree/main/litellm
-  exclude: ["*/tests/*", "*.pyc", "__pycache__", "*/ui/*", "*/proxy/*", "*/litellm_core_utils/tokenizers/*", "*/llms/huggingface/huggingface_llms_metadata/*"]
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+  - '*/ui/*'
+  - '*/proxy/*'
+  - '*/litellm_core_utils/tokenizers/*'
+  - '*/llms/huggingface/huggingface_llms_metadata/*'
 - owner: chroma-core
   package: chromadb
   language: Python
   url: https://github.com/chroma-core/chroma/tree/main/chromadb
-  exclude: ["*/test/*", "*.pyc", "__pycache__"]
+  exclude:
+  - '*/test/*'
+  - '*.pyc'
+  - __pycache__
 - owner: chroma-core
   package: google-gemini-js
   language: TypeScript
   url: https://github.com/chroma-core/chroma/tree/main/clients/new-js/packages/ai-embeddings/google-gemini
-  exclude: ["*/test/*", "*.test.ts", "*/__fixtures__/*"]
+  exclude:
+  - '*/test/*'
+  - '*.test.ts'
+  - '*/__fixtures__/*'
 - owner: browser-use
   package: browser-use
   language: Python
   url: https://github.com/browser-use/browser-use/tree/main/browser_use
   exclude:
-    # Temporarily exclude vercel/chat.py due to b/492380698
-    - "browser_use/llm/vercel/chat.py"
-    - "*/tests/*"
-    - "*.pyc"
-    - "__pycache__"
+  - browser_use/llm/vercel/chat.py
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: pinecone-io
   package: pinecone
   language: Python
   url: https://github.com/pinecone-io/pinecone-python-client/tree/main/pinecone
-  exclude: ["*/tests/*", "*.pyc", "__pycache__"]
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: weaviate
   package: weaviate
   language: Python
   url: https://github.com/weaviate/weaviate-python-client/tree/main/weaviate
-  exclude: ["*/tests/*", "*.pyc", "__pycache__"]
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: milvus-io
   package: pymilvus
   language: Python
   url: https://github.com/milvus-io/pymilvus/tree/master/pymilvus
-  exclude: ["*/tests/*", "*.pyc", "__pycache__", "**/grpc_gen/**"]
-
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+  - '**/grpc_gen/**'
 - owner: crewAIInc
   package: crewAI
   language: Python
   url: https://github.com/crewAIInc/crewAI/tree/main/lib/crewai/src/crewai
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: microsoft
   package: semantic-kernel-dotnet
   language: C#
@@ -111,99 +145,99 @@
   language: Java
   url: https://github.com/microsoft/semantic-kernel-java/tree/main/semantickernel-api
   exclude:
-    - '*/test/*'
+  - '*/test/*'
 - owner: livekit
   package: livekit-agents
   language: Python
   url: https://github.com/livekit/agents/tree/main/livekit-agents/livekit/agents
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: livekit
   package: livekit-plugins-google
   language: Python
   url: https://github.com/livekit/agents/tree/main/livekit-plugins/livekit-plugins-google/livekit/plugins/google
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: agno-agi
   package: agno
   language: Python
   url: https://github.com/agno-agi/agno/tree/main/libs/agno/agno
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: firebase
   package: genkit-js-core
   language: TypeScript
   url: https://github.com/firebase/genkit/tree/main/js/core/src
   exclude:
-    - '*/tests/*'
-    - '*.test.ts'
-    - '*/__fixtures__/*'
+  - '*/tests/*'
+  - '*.test.ts'
+  - '*/__fixtures__/*'
 - owner: firebase
   package: genkit-js-ai
   language: TypeScript
   url: https://github.com/firebase/genkit/tree/main/js/ai/src
   exclude:
-    - '*/tests/*'
-    - '*.test.ts'
-    - '*/__fixtures__/*'
+  - '*/tests/*'
+  - '*.test.ts'
+  - '*/__fixtures__/*'
 - owner: firebase
   package: genkit-js-google-genai
   language: TypeScript
   url: https://github.com/firebase/genkit/tree/main/js/plugins/google-genai/src
   exclude:
-    - '*/tests/*'
-    - '*.test.ts'
+  - '*/tests/*'
+  - '*.test.ts'
 - owner: firebase
   package: genkit-go
   language: Go
   url: https://github.com/firebase/genkit/tree/main/go/genkit
   exclude:
-    - '*/*_test.go'
+  - '*/*_test.go'
 - owner: firebase
   package: genkit-go-google-genai
   language: Go
   url: https://github.com/firebase/genkit/tree/main/go/plugins/googlegenai
   exclude:
-    - '*/*_test.go'
+  - '*/*_test.go'
 - owner: firebase
   package: genkit-py
   language: Python
   url: https://github.com/firebase/genkit/tree/main/py/packages/genkit
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: firebase
   package: genkit-py-google-genai
   language: Python
   url: https://github.com/firebase/genkit/tree/main/py/plugins/google-genai/src
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: mastra-ai
   package: mastra-core
   language: TypeScript
   url: https://github.com/mastra-ai/mastra/tree/main/packages/core
   exclude:
-    - '*/tests/*'
-    - '*.test.ts'
-    - '**/__recordings__/**'
-    - '**/__recordings__/*'
+  - '*/tests/*'
+  - '*.test.ts'
+  - '**/__recordings__/**'
+  - '**/__recordings__/*'
 - owner: microsoft
   package: autogen-core
   language: Python
   url: https://github.com/microsoft/autogen/tree/main/python/packages/autogen-core/src/autogen_core
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: microsoft
   package: autogen-dotnet-core
   language: C#
@@ -217,27 +251,27 @@
   language: Python
   url: https://github.com/Upsonic/Upsonic/tree/master/src/upsonic
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: yamadashy
   package: repomix
   language: TypeScript
   url: https://github.com/yamadashy/repomix/tree/main/src
   exclude:
-    - '*/tests/*'
-    - '*.test.ts'
+  - '*/tests/*'
+  - '*.test.ts'
 - owner: microsoft
   package: agent-framework-python
   language: Python
   url: https://github.com/microsoft/agent-framework/tree/main/python
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
-    - 'python/packages/devui/agent_framework_devui/ui/assets/*'
-    - '**/tsconfig.node.tsbuildinfo'
-    - '**/tsconfig.tsbuildinfo'
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+  - python/packages/devui/agent_framework_devui/ui/assets/*
+  - '**/tsconfig.node.tsbuildinfo'
+  - '**/tsconfig.tsbuildinfo'
 - owner: microsoft
   package: agent-framework-dotnet
   language: C#
@@ -247,71 +281,143 @@
   language: TypeScript
   url: https://github.com/CopilotKit/CopilotKit/tree/main/packages
   exclude:
-    - '*/tests/*'
-    - '*.test.ts'
-    - '*/__fixtures__/*'
-    - '**/icons.tsx'
+  - '*/tests/*'
+  - '*.test.ts'
+  - '*/__fixtures__/*'
+  - '**/icons.tsx'
 - owner: CopilotKit
   package: CopilotKit-ts-google
   language: TypeScript
   url: https://github.com/CopilotKit/CopilotKit/tree/main/packages/v1/runtime/src/service-adapters/google
   exclude:
-    - '*/tests/*'
-    - '*.test.ts'
+  - '*/tests/*'
+  - '*.test.ts'
 - owner: CopilotKit
   package: CopilotKit-py
   language: Python
   url: https://github.com/CopilotKit/CopilotKit/tree/main/sdk-python/copilotkit
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: mem0ai
   package: mem0
   language: Python
   url: https://github.com/mem0ai/mem0/tree/main/mem0
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: mem0ai
   package: mem0-ts
   language: TypeScript
   url: https://github.com/mem0ai/mem0/tree/main/mem0-ts/src
   exclude:
-    - '*/tests/*'
-    - '*.test.ts'
+  - '*/tests/*'
+  - '*.test.ts'
 - owner: openai
   package: swarm
   language: Python
   url: https://github.com/openai/swarm/tree/main/swarm
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: letta-ai
   package: letta
   language: Python
   url: https://github.com/letta-ai/letta/tree/main/letta
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
-    # Temporarily blocked for b/492380698
-    - 'letta/interfaces/openai_streaming_interface.py'
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+  - letta/interfaces/openai_streaming_interface.py
 - owner: openai
   package: openai-agents
   language: Python
   url: https://github.com/openai/openai-agents-python/tree/main/src/agents
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
 - owner: camel-ai
   package: camel
   language: Python
   url: https://github.com/camel-ai/camel/tree/master/camel
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+- owner: livekit
+  package: livekit
+  language: Go
+  url: https://github.com/livekit/livekit/tree/master
+  exclude:
+  - '*/*_test.go'
+- owner: livekit
+  package: livekit-client-js
+  language: TypeScript
+  url: https://github.com/livekit/client-sdk-js/tree/main/src
+  exclude:
+  - '*/test/*'
+  - '*.test.ts'
+- owner: livekit
+  package: livekit-python
+  language: Python
+  url: https://github.com/livekit/python-sdks/tree/main/livekit-api/livekit/api
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+- owner: pipecat-ai
+  package: pipecat
+  language: Python
+  url: https://github.com/pipecat-ai/pipecat/tree/main/src/pipecat
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+- owner: pipecat-ai
+  package: pipecat-client-js
+  language: TypeScript
+  url: https://github.com/pipecat-ai/pipecat-client-web/tree/main/packages/client-js/src
+  exclude:
+  - '*/tests/*'
+  - '*.test.ts'
+- owner: eigent-ai
+  package: eigent
+  language: TypeScript
+  url: https://github.com/eigent-ai/eigent/tree/main
+  exclude:
+  - '*/tests/*'
+  - '*.test.ts'
+- owner: temporalio
+  package: temporalio-python
+  language: Python
+  url: https://github.com/temporalio/sdk-python/tree/main/temporalio
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+- owner: temporalio
+  package: temporalio-typescript
+  language: TypeScript
+  url: https://github.com/temporalio/sdk-typescript/tree/main/packages
+  exclude:
+  - '*/tests/*'
+  - '*.test.ts'
+- owner: qdrant
+  package: qdrant-client
+  language: Python
+  url: https://github.com/qdrant/qdrant-client/tree/master/qdrant_client
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+- owner: qdrant
+  package: qdrant-js
+  language: TypeScript
+  url: https://github.com/qdrant/qdrant-js/tree/master/packages/js-client-rest/src
+  exclude:
+  - '*/tests/*'
+  - '*.test.ts'
