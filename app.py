@@ -355,16 +355,28 @@ def clean(delete=False):
             except json.JSONDecodeError:
                 db = {}
                 
-    active_docs = set()
+    active_doc_names = set()
+    active_display_names = set()
     for pkg in db.values():
         if pkg.get("pending_operation_name"):
             op_name = pkg["pending_operation_name"]
             doc_name = op_name.replace("/operations/", "/documents/")
-            active_docs.add(doc_name)
+            active_doc_names.add(doc_name)
+        if pkg.get("file_name"):
+            file_id = pkg["file_name"].split("/")[-1]
+            active_display_names.add(file_id)
             
     print(f"Checking store {store_name} for orphaned documents...")
     all_docs = list(client.file_search_stores.documents.list(parent=store_name))
-    orphaned_docs = [doc for doc in all_docs if doc.name not in active_docs]
+    
+    orphaned_docs = []
+    for doc in all_docs:
+        if doc.name in active_doc_names:
+            continue
+        display_name = getattr(doc, 'display_name', '')
+        if display_name in active_display_names:
+            continue
+        orphaned_docs.append(doc)
     
     if not orphaned_docs:
         print("No orphaned documents found.")
