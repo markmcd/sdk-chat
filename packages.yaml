@@ -380,7 +380,7 @@
 - owner: pipecat-ai
   package: pipecat-client-js
   language: TypeScript
-  url: https://github.com/pipecat-ai/pipecat-client-web/tree/main/packages/client-js/src
+  url: https://github.com/pipecat-ai/pipecat-client-web/tree/main/client-js
   exclude:
   - '*/tests/*'
   - '*.test.ts'
@@ -399,6 +399,7 @@
   - '*/tests/*'
   - '*.pyc'
   - __pycache__
+  - temporalio/api/cloud/cloudservice/v1/service_pb2.py
 - owner: temporalio
   package: temporalio-typescript
   language: TypeScript
@@ -406,6 +407,8 @@
   exclude:
   - '*/tests/*'
   - '*.test.ts'
+  - 'packages/test/tls_certs/*'
+  - 'packages/test/tls_certs/**'
 - owner: qdrant
   package: qdrant-client
   language: Python
