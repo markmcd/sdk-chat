@@ -578,5 +578,91 @@
     ],
     "file_name": "files/k7omm8qp2zf5",
     "last_ingested": "Mon Mar 23 17:59:28 2026"
+  },
+  {
+    "owner": "livekit",
+    "package": "livekit",
+    "language": "Go",
+    "url": "https://github.com/livekit/livekit/tree/master",
+    "exclude": [
+      "*/*_test.go"
+    ],
+    "file_name": "files/w04loqqv7jvf",
+    "last_ingested": "Tue Mar 24 12:02:21 2026"
+  },
+  {
+    "owner": "livekit",
+    "package": "livekit-client-js",
+    "language": "TypeScript",
+    "url": "https://github.com/livekit/client-sdk-js/tree/main/src",
+    "exclude": [
+      "*/test/*",
+      "*.test.ts"
+    ],
+    "file_name": "files/kptivubd5r0u",
+    "last_ingested": "Tue Mar 24 12:02:28 2026"
+  },
+  {
+    "owner": "livekit",
+    "package": "livekit-python",
+    "language": "Python",
+    "url": "https://github.com/livekit/python-sdks/tree/main/livekit-api/livekit/api",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "file_name": "files/vruivu17wnyw",
+    "last_ingested": "Tue Mar 24 12:02:35 2026"
+  },
+  {
+    "owner": "pipecat-ai",
+    "package": "pipecat",
+    "language": "Python",
+    "url": "https://github.com/pipecat-ai/pipecat/tree/main/src/pipecat",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "file_name": "files/78tg5l38ozhf",
+    "last_ingested": "Tue Mar 24 12:02:41 2026"
+  },
+  {
+    "owner": "eigent-ai",
+    "package": "eigent",
+    "language": "TypeScript",
+    "url": "https://github.com/eigent-ai/eigent/tree/main",
+    "exclude": [
+      "*/tests/*",
+      "*.test.ts"
+    ],
+    "file_name": "files/9k7afzdmwmv1",
+    "last_ingested": "Tue Mar 24 12:02:48 2026"
+  },
+  {
+    "owner": "qdrant",
+    "package": "qdrant-client",
+    "language": "Python",
+    "url": "https://github.com/qdrant/qdrant-client/tree/master/qdrant_client",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "file_name": "files/59c2vpzu5eu6",
+    "last_ingested": "Tue Mar 24 12:02:54 2026"
+  },
+  {
+    "owner": "qdrant",
+    "package": "qdrant-js",
+    "language": "TypeScript",
+    "url": "https://github.com/qdrant/qdrant-js/tree/master/packages/js-client-rest/src",
+    "exclude": [
+      "*/tests/*",
+      "*.test.ts"
+    ],
+    "file_name": "files/x7dkc9wzwpxv",
+    "last_ingested": "Tue Mar 24 12:03:01 2026"
   }
 ]
