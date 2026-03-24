@@ -5,7 +5,7 @@ from google import genai
 client = genai.Client()
 
 def get_store_name():
-    with open(".store_name", "r") as f:
+    with open(".dev_store_name", "r") as f:
         return f.read().strip()
 
 STORE_NAME = get_store_name()
