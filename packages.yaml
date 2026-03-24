@@ -307,6 +307,82 @@
   language: Python
   url: https://github.com/camel-ai/camel/tree/master/camel
   exclude:
-    - '*/tests/*'
-    - '*.pyc'
-    - __pycache__
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+- owner: livekit
+  package: livekit
+  language: Go
+  url: https://github.com/livekit/livekit/tree/master
+  exclude:
+  - '*/*_test.go'
+- owner: livekit
+  package: livekit-client-js
+  language: TypeScript
+  url: https://github.com/livekit/client-sdk-js/tree/main/src
+  exclude:
+  - '*/test/*'
+  - '*.test.ts'
+- owner: livekit
+  package: livekit-python
+  language: Python
+  url: https://github.com/livekit/python-sdks/tree/main/livekit-api/livekit/api
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+- owner: pipecat-ai
+  package: pipecat
+  language: Python
+  url: https://github.com/pipecat-ai/pipecat/tree/main/src/pipecat
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+- owner: pipecat-ai
+  package: pipecat-client-js
+  language: TypeScript
+  url: https://github.com/pipecat-ai/pipecat-client-web/tree/main/client-js
+  exclude:
+  - '*/tests/*'
+  - '*.test.ts'
+- owner: eigent-ai
+  package: eigent
+  language: TypeScript
+  url: https://github.com/eigent-ai/eigent/tree/main
+  exclude:
+  - '*/tests/*'
+  - '*.test.ts'
+- owner: temporalio
+  package: temporalio-python
+  language: Python
+  url: https://github.com/temporalio/sdk-python/tree/main/temporalio
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+  - temporalio/api/cloud/cloudservice/v1/service_pb2.py
+- owner: temporalio
+  package: temporalio-typescript
+  language: TypeScript
+  url: https://github.com/temporalio/sdk-typescript/tree/main/packages
+  exclude:
+  - '*/tests/*'
+  - '*.test.ts'
+  - 'packages/test/tls_certs/*'
+  - 'packages/test/tls_certs/**'
+- owner: qdrant
+  package: qdrant-client
+  language: Python
+  url: https://github.com/qdrant/qdrant-client/tree/master/qdrant_client
+  exclude:
+  - '*/tests/*'
+  - '*.pyc'
+  - __pycache__
+- owner: qdrant
+  package: qdrant-js
+  language: TypeScript
+  url: https://github.com/qdrant/qdrant-js/tree/master/packages/js-client-rest/src
+  exclude:
+  - '*/tests/*'
+  - '*.test.ts'
