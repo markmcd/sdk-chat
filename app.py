@@ -378,10 +378,13 @@ def clean(delete=False):
             continue
         orphaned_docs.append(doc)
     
+    kept_count = len(all_docs) - len(orphaned_docs)
+    
     if not orphaned_docs:
-        print("No orphaned documents found.")
+        print(f"No orphaned documents found. Keeping {kept_count} active documents.")
         return
         
+    print(f"Keeping {kept_count} active documents.")
     print(f"Found {len(orphaned_docs)} orphaned documents:")
     for doc in orphaned_docs:
         print(f" - {doc.name} ({getattr(doc, 'display_name', 'Unknown')})")
