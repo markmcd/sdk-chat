@@ -703,7 +703,6 @@
       "temporalio/api/cloud/cloudservice/v1/service_pb2.py",
       "temporalio/api/*service/v1/service_pb2.py"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/q1dwtt7de43w-frbqm6zj2x12",
     "file_name": "files/q1dwtt7de43w",
     "last_ingested": "Tue Mar 24 17:38:36 2026"
   }
