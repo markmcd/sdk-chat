@@ -362,6 +362,7 @@
   - '*.pyc'
   - __pycache__
   - temporalio/api/cloud/cloudservice/v1/service_pb2.py
+  - temporalio/api/*service/v1/service_pb2.py
 - owner: temporalio
   package: temporalio-typescript
   language: TypeScript
