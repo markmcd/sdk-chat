@@ -1,3 +1,11 @@
+- owner: googleapis
+  package: python-genai
+  language: Python
+  url: https://github.com/googleapis/python-genai/tree/main/google
+- owner: googleapis
+  package: js-genai
+  language: TypeScript
+  url: https://github.com/googleapis/js-genai/tree/main/src
 - owner: langchain-ai
   package: langchain
   language: Python
@@ -408,8 +416,8 @@
   exclude:
   - '*/tests/*'
   - '*.test.ts'
-  - 'packages/test/tls_certs/*'
-  - 'packages/test/tls_certs/**'
+  - packages/test/tls_certs/*
+  - packages/test/tls_certs/**
 - owner: qdrant
   package: qdrant-client
   language: Python
@@ -425,3 +433,15 @@
   exclude:
   - '*/tests/*'
   - '*.test.ts'
+- owner: googleapis
+  package: go-genai
+  language: Go
+  url: https://github.com/googleapis/go-genai/tree/main
+  exclude:
+  - '*_test.go'
+  - '*/*_test.go'
+  - '**/testdata/*'
+- owner: googleapis
+  package: dotnet-genai
+  language: C#
+  url: https://github.com/googleapis/dotnet-genai/tree/main/Google.GenAI
