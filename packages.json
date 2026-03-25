@@ -705,5 +705,42 @@
     ],
     "file_name": "files/q1dwtt7de43w",
     "last_ingested": "Tue Mar 24 17:38:36 2026"
+  },
+  {
+    "owner": "googleapis",
+    "package": "google-genai-python",
+    "language": "Python",
+    "url": "https://github.com/googleapis/python-genai/tree/main/google",
+    "file_name": "files/rlcge4d2yrtq",
+    "last_ingested": "Wed Mar 25 14:23:56 2026"
+  },
+  {
+    "owner": "googleapis",
+    "package": "google-genai-js",
+    "language": "TypeScript",
+    "url": "https://github.com/googleapis/js-genai/tree/main/src",
+    "file_name": "files/1e85cmrs5e82",
+    "last_ingested": "Wed Mar 25 14:24:03 2026"
+  },
+  {
+    "owner": "googleapis",
+    "package": "dotnet-genai",
+    "language": "C#",
+    "url": "https://github.com/googleapis/dotnet-genai/tree/main/Google.GenAI",
+    "file_name": "files/8jr4bga98313",
+    "last_ingested": "Wed Mar 25 15:12:24 2026"
+  },
+  {
+    "owner": "googleapis",
+    "package": "go-genai",
+    "language": "Go",
+    "url": "https://github.com/googleapis/go-genai/tree/main",
+    "exclude": [
+      "*_test.go",
+      "*/*_test.go",
+      "**/testdata/*"
+    ],
+    "file_name": "files/d8psop54s2fh",
+    "last_ingested": "Wed Mar 25 17:11:42 2026"
   }
 ]
