@@ -9,11 +9,11 @@ import gitingest
 from google import genai
 from google.genai import types
 
-STORE_NAME_FILE = ".store_name"
-PACKAGES_DB = "packages.json"
+STORE_NAME_FILE = os.path.join(os.environ.get("DATA_DIR", "."), ".store_name")
+PACKAGES_DB = os.path.join(os.environ.get("DATA_DIR", "."), "packages.json")
 PACKAGES_YAML = "packages.yaml"
 SYSTEM_PROMPT_FILE = "system_prompt.txt"
-FAILED_PACKAGES_FILE = "failed_packages.json"
+FAILED_PACKAGES_FILE = os.path.join(os.environ.get("DATA_DIR", "."), "failed_packages.json")
 
 def load_system_prompt():
     if os.path.exists(SYSTEM_PROMPT_FILE):
