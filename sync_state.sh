@@ -35,46 +35,53 @@ if [ "$COMMAND" == "seed" ]; then
     echo -e "\nSeed complete! GCS bucket is now primed with the config branch state."
 
 elif [ "$COMMAND" == "save" ]; then
-    echo "Saving state from $BUCKET back to the '$BRANCH' branch..."
-    
-    # Stash any uncommitted changes to avoid conflicts
-    CURRENT_BRANCH=$(git branch --show-current)
-    STASHED=$(git stash push -m "Temp stash for state sync" | grep "Saved working directory" || true)
-
-    # Check out the target branch
-    git checkout $BRANCH
-    git pull origin $BRANCH || true
-
-    # Download from GCS
-    for file in "${STATE_FILES[@]}"; do
-        gcloud storage cp "$BUCKET/$file" "$file" || echo "Note: $file not found in GCS or failed to download."
-    done
-
-    # Commit and push
-    git add "${STATE_FILES[@]}"
-    if git diff --staged --quiet; then
-        echo "No state changes found to commit."
+    if [ "$2" == "--local" ]; then
+        echo "Saving state from $BUCKET to current local directory..."
+        for file in "${STATE_FILES[@]}"; do
+            gcloud storage cp "$BUCKET/$file" "$file" || echo "Note: $file not found in GCS or failed to download."
+        done
+        echo -e "\nLocal sync complete!"
     else
-        git commit -m "chore: sync state from GCS after ingest run"
-        git push origin $BRANCH
-        echo "Changes pushed to $BRANCH!"
-    fi
+        echo "Saving state from $BUCKET back to the '$BRANCH' branch..."
+        
+        # Stash any uncommitted changes to avoid conflicts
+        CURRENT_BRANCH=$(git branch --show-current)
+        STASHED=$(git stash push -m "Temp stash for state sync" | grep "Saved working directory" || true)
 
-    # Return to original state
-    git checkout $CURRENT_BRANCH
-    if [ -n "$STASHED" ]; then
-        git stash pop
+        # Check out the target branch
+        git checkout $BRANCH
+        git pull origin $BRANCH || true
+
+        # Download from GCS
+        for file in "${STATE_FILES[@]}"; do
+            gcloud storage cp "$BUCKET/$file" "$file" || echo "Note: $file not found in GCS or failed to download."
+        done
+
+        # Commit and push
+        git add "${STATE_FILES[@]}"
+        if git diff --staged --quiet; then
+            echo "No state changes found to commit."
+        else
+            git commit -m "chore: sync state from GCS after ingest run"
+            git push origin $BRANCH
+            echo "Changes pushed to $BRANCH!"
+        fi
+
+        # Return to original state
+        git checkout $CURRENT_BRANCH
+        if [ -n "$STASHED" ]; then
+            git stash pop
+        fi
+        echo -e "\nSave complete!"
     fi
-    echo -e "\nSave complete!"
 
 else
-    echo "Usage: ./sync_state.sh [seed|save]"
+    echo "Usage: ./sync_state.sh [seed|save [--local]]"
     echo ""
     echo "Commands:"
-    echo "  seed  - Extracts .store_name and packages.json from '$BRANCH' and uploads to GCS."
-    echo "          Run this BEFORE creating/running the Cloud Run Job."
-    echo "  save  - Downloads updated state from GCS, commits to '$BRANCH', and pushes to git."
-    echo "          Run this periodically to snapshot the Cloud Run Job's progress."
+    echo "  seed             - Extracts .store_name and packages.json from '$BRANCH' and uploads to GCS."
+    echo "  save             - Downloads updated state from GCS, commits to '$BRANCH', and pushes to git."
+    echo "  save --local     - Downloads updated state from GCS to your CURRENT directory (no git operations)."
     echo ""
     echo "Environment Variables:"
     echo "  GCS_BUCKET - Override the default GCS bucket (default: gs://<gcloud-project>-sdk-chat-state)"
