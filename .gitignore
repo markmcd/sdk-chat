@@ -2,3 +2,4 @@ packages.json
 .store_name
 *.txt
 .env
+.venv
