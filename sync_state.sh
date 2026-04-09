@@ -10,29 +10,41 @@ STATE_FILES=(".store_name" "packages.json" "failed_packages.json")
 COMMAND=$1
 
 if [ "$COMMAND" == "seed" ]; then
-    echo "Seeding $BUCKET from the '$BRANCH' branch..."
-    mkdir -p .tmp_state
-    
-    # Ensure we have the latest branches
-    git fetch origin $BRANCH || true
+    if [ "$2" == "--local" ]; then
+        echo "Seeding $BUCKET from current local directory..."
+        for file in "${STATE_FILES[@]}"; do
+            if [ -f "$file" ]; then
+                echo "Uploading local $file..."
+                gcloud storage cp "$file" "$BUCKET/$file"
+            else
+                echo "Local file $file not found. Skipping."
+            fi
+        done
+    else
+        echo "Seeding $BUCKET from the '$BRANCH' branch..."
+        mkdir -p .tmp_state
+        
+        # Ensure we have the latest branches
+        git fetch origin $BRANCH || true
 
-    for file in "${STATE_FILES[@]}"; do
-        # Check if file exists in the branch
-        if git ls-tree -r "origin/$BRANCH" --name-only 2>/dev/null | grep -q "^$file$" || \
-           git ls-tree -r "$BRANCH" --name-only 2>/dev/null | grep -q "^$file$"; then
-            
-            # Prefer origin branch if available, fallback to local
-            REF=$([ -n "$(git ls-remote --heads origin $BRANCH)" ] && echo "origin/$BRANCH" || echo "$BRANCH")
-            
-            echo "Extracting $file from $REF..."
-            git show "$REF:$file" > ".tmp_state/$file"
-            gcloud storage cp ".tmp_state/$file" "$BUCKET/$file"
-        else
-            echo "File $file not found in $BRANCH branch. Skipping."
-        fi
-    done
-    rm -rf .tmp_state
-    echo -e "\nSeed complete! GCS bucket is now primed with the config branch state."
+        for file in "${STATE_FILES[@]}"; do
+            # Check if file exists in the branch
+            if git ls-tree -r "origin/$BRANCH" --name-only 2>/dev/null | grep -q "^$file$" || \
+               git ls-tree -r "$BRANCH" --name-only 2>/dev/null | grep -q "^$file$"; then
+                
+                # Prefer origin branch if available, fallback to local
+                REF=$([ -n "$(git ls-remote --heads origin $BRANCH)" ] && echo "origin/$BRANCH" || echo "$BRANCH")
+                
+                echo "Extracting $file from $REF..."
+                git show "$REF:$file" > ".tmp_state/$file"
+                gcloud storage cp ".tmp_state/$file" "$BUCKET/$file"
+            else
+                echo "File $file not found in $BRANCH branch. Skipping."
+            fi
+        done
+        rm -rf .tmp_state
+    fi
+    echo -e "\nSeed complete! GCS bucket is now primed."
 
 elif [ "$COMMAND" == "save" ]; then
     if [ "$2" == "--local" ]; then

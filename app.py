@@ -40,12 +40,25 @@ def get_store(client):
     if os.path.exists(STORE_NAME_FILE):
         with open(STORE_NAME_FILE, "r") as f:
             store_name = f.read().strip()
+            
+            # Ensure the name is fully qualified as the SDK expects
+            if store_name and not store_name.startswith("fileSearchStores/"):
+                store_name = f"fileSearchStores/{store_name}"
+
             # Verify it exists
             try:
                 client.file_search_stores.get(name=store_name)
                 return store_name
-            except Exception:
-                pass # Doesn't exist, create a new one
+            except Exception as e:
+                error_msg = str(e).lower()
+                # Only create new if it's explicitly a "not found" style error
+                if "not found" in error_msg or "404" in error_msg:
+                    print(f"Store {store_name} not found. Creating new one...")
+                else:
+                    print(f"Error verifying store {store_name}: {e}")
+                    print("Aborting to prevent accidental creation of a duplicate store.")
+                    print("Check your API key, permissions, or if the store name format is correct.")
+                    exit(1)
 
     print("Creating new File Search Store...")
     store = client.file_search_stores.create(
