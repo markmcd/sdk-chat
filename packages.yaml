@@ -257,7 +257,7 @@
 - owner: CopilotKit
   package: CopilotKit-ts-google
   language: TypeScript
-  url: https://github.com/CopilotKit/CopilotKit/tree/main/packages/v1/runtime/src/service-adapters/google
+  url: https://github.com/CopilotKit/CopilotKit/tree/main/packages/runtime/src/service-adapters/google
   exclude:
     - '*/tests/*'
     - '*.test.ts'
