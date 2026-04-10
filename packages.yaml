@@ -345,9 +345,35 @@
   language: Python
   url: https://github.com/openai/openai-agents-python/tree/main/src/agents
   exclude:
-  - '*/tests/*'
-  - '*.pyc'
-  - __pycache__
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: openai
+  package: openai-python
+  language: Python
+  url: https://github.com/openai/openai-python/tree/main/src/openai
+  exclude:
+    - '*/tests/*'
+    - '*.pyc'
+    - __pycache__
+- owner: openai
+  package: openai-node
+  language: TypeScript
+  url: https://github.com/openai/openai-node/tree/master/src
+  exclude:
+    - '*/test/*'
+    - '*.test.ts'
+    - '*/__fixtures__/*'
+- owner: openai
+  package: openai-go
+  language: Go
+  url: https://github.com/openai/openai-go/tree/main
+  exclude:
+    - '*/*_test.go'
+- owner: openai
+  package: openai-dotnet
+  language: C#
+  url: https://github.com/openai/openai-dotnet/tree/main/src
 - owner: camel-ai
   package: camel
   language: Python
