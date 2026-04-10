@@ -211,7 +211,7 @@ def ingest(update=False, since=None, package=None):
         for attempt in range(max_retries):
             try:
                 # Unique filename for upload, generated fresh for each attempt
-                unique_filename = f"{int(time.time())}_{pkg_name}_attempt{attempt}.txt"
+                unique_filename = os.path.join(data_dir, f"{int(time.time())}_{pkg_name}_attempt{attempt}.txt")
                 with open(unique_filename, "w", encoding="utf-8") as f:
                     f.write(content)
                     
@@ -245,7 +245,7 @@ def ingest(update=False, since=None, package=None):
                     }
                 )
                 break
-                except Exception as e:
+            except Exception as e:
                 print(f"  RETRY_FAILURE_ALERT: Package {pkg_name} upload/import attempt {attempt + 1} failed: {e}")
                 # Clean up the failed attempt's file
                 if os.path.exists(unique_filename):
@@ -293,6 +293,11 @@ def ingest(update=False, since=None, package=None):
             # Cleanup the unique file
             if unique_filename and os.path.exists(unique_filename):
                 os.remove(unique_filename)
+                
+            # Cleanup the original raw text file
+            raw_filename = os.path.join(os.environ.get("DATA_DIR", "."), f"{pkg_name}.txt")
+            if os.path.exists(raw_filename):
+                os.remove(raw_filename)
 
             # Update local DB entry
             pkg_entry = pkg.copy()
