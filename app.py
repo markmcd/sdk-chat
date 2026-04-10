@@ -245,7 +245,7 @@ def ingest(update=False, since=None, package=None):
                     }
                 )
                 break
-                except Exception as e:
+            except Exception as e:
                 print(f"  RETRY_FAILURE_ALERT: Package {pkg_name} upload/import attempt {attempt + 1} failed: {e}")
                 # Clean up the failed attempt's file
                 if os.path.exists(unique_filename):
