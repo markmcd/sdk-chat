@@ -208,6 +208,7 @@ def ingest(update=False, since=None, package=None):
         max_retries = 3
         operation = None
         unique_filename = ""
+        data_dir = os.environ.get("DATA_DIR", ".")
         for attempt in range(max_retries):
             try:
                 # Unique filename for upload, generated fresh for each attempt
