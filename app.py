@@ -245,16 +245,16 @@ def ingest(update=False, since=None, package=None):
                     }
                 )
                 break
-            except Exception as e:
-                print(f"  Upload/Import attempt {attempt + 1} failed: {e}")
+                except Exception as e:
+                print(f"  RETRY_FAILURE_ALERT: Package {pkg_name} upload/import attempt {attempt + 1} failed: {e}")
                 # Clean up the failed attempt's file
                 if os.path.exists(unique_filename):
                     os.remove(unique_filename)
-                
+
                 if attempt < max_retries - 1:
                     time.sleep(30) # Wait longer on 503 errors
                 else:
-                    print(f"  FAILED to upload {pkg_name} after {max_retries} attempts. Skipping.")
+                    print(f"  FINAL_FAILURE_ALERT: FAILED to upload {pkg_name} after {max_retries} attempts. Skipping.")
                     operation = None
                     
         if operation is None:
@@ -302,6 +302,9 @@ def ingest(update=False, since=None, package=None):
         
             with open(PACKAGES_DB, "w") as f:
                 json.dump(list(db.values()), f, indent=2)
+        
+    if failed_packages:
+        print(f"\nINGEST_FAILURE_REPORT: The following {len(failed_packages)} packages failed to ingest: {', '.join(sorted(failed_packages))}")
         
     print("\nIngestion process complete!")
 

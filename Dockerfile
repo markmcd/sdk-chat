@@ -16,6 +16,9 @@ RUN uv sync --frozen --no-dev
 # Copy the rest of the application
 COPY . .
 
+# Ensure run.sh is executable
+RUN chmod +x run.sh
+
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
 ENV DATA_DIR=/app/data
@@ -24,5 +27,4 @@ ENV DATA_DIR=/app/data
 RUN mkdir -p /app/data
 
 # Default command
-ENTRYPOINT ["uv", "run", "app.py"]
-CMD ["ingest", "--update", "--since", "24h"]
+ENTRYPOINT ["/app/run.sh"]
