@@ -176,7 +176,8 @@ def ingest(update=False, since=None, package=None):
             except Exception as e:
                 print(f"Warning: Could not delete old temporary file: {e}")
 
-        filename = f"{pkg_name}.txt"
+        data_dir = os.environ.get("DATA_DIR", ".")
+        filename = os.path.join(data_dir, f"{pkg_name}.txt")
         
         # Run gitingest
         print(f"Downloading and processing with gitingest from {pkg['url']}...")
@@ -191,6 +192,7 @@ def ingest(update=False, since=None, package=None):
         except Exception as e:
             print(f"  FAILED to process {pkg_name} with gitingest: {e}")
             failed_packages.add(pkg_name)
+            
             with open(FAILED_PACKAGES_FILE, "w") as f:
                 json.dump(list(failed_packages), f, indent=2)
             continue
@@ -221,6 +223,10 @@ def ingest(update=False, since=None, package=None):
                     file=unique_filename,
                     config={'display_name': pkg_name}
                 )
+                
+                # Cleanup the timestamped file immediately after upload succeeds
+                if os.path.exists(unique_filename):
+                    os.remove(unique_filename)
                 
                 print(f"  File uploaded to {uploaded_file.name}. Waiting for file processing...")
                 while uploaded_file.state == "PROCESSING":
@@ -256,6 +262,12 @@ def ingest(update=False, since=None, package=None):
                     time.sleep(30) # Wait longer on 503 errors
                 else:
                     print(f"  FINAL_FAILURE_ALERT: FAILED to upload {pkg_name} after {max_retries} attempts. Skipping.")
+                    
+                    # Persist the actual content that failed to upload for debugging
+                    error_filename = os.path.join(data_dir, f"{pkg_name}.error.txt")
+                    with open(error_filename, "w", encoding="utf-8") as f:
+                        f.write(content)
+                    
                     operation = None
                     
         if operation is None:
@@ -282,7 +294,7 @@ def ingest(update=False, since=None, package=None):
         
     if pending_operations:
         print("\nWaiting for all indexing operations to complete on the Gemini backend...")
-        for pkg_name, pkg, operation, unique_filename, uploaded_file_name in pending_operations:
+        for pkg_name, pkg, operation, unique_filename_unused, uploaded_file_name in pending_operations:
             print(f"Waiting for {pkg_name} to finish indexing...")
             while not operation.done:
                 time.sleep(5)
@@ -291,14 +303,16 @@ def ingest(update=False, since=None, package=None):
                 
             print(f"Finished indexing {pkg_name}.")
 
-            # Cleanup the unique file
-            if unique_filename and os.path.exists(unique_filename):
-                os.remove(unique_filename)
-                
             # Cleanup the original raw text file
-            raw_filename = os.path.join(os.environ.get("DATA_DIR", "."), f"{pkg_name}.txt")
+            data_dir = os.environ.get("DATA_DIR", ".")
+            raw_filename = os.path.join(data_dir, f"{pkg_name}.txt")
             if os.path.exists(raw_filename):
                 os.remove(raw_filename)
+            
+            # Cleanup error file if it exists (in case it succeeded this time)
+            error_filename = os.path.join(data_dir, f"{pkg_name}.error.txt")
+            if os.path.exists(error_filename):
+                os.remove(error_filename)
 
             # Update local DB entry
             pkg_entry = pkg.copy()
