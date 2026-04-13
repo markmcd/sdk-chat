@@ -4,45 +4,40 @@
     "package": "langchain",
     "language": "Python",
     "url": "https://github.com/langchain-ai/langchain/tree/master/libs/langchain",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/3rfa5l8t58y1-pl4o1g26hm58",
-    "file_name": "files/3rfa5l8t58y1",
-    "last_ingested": "Thu Apr  9 09:19:01 2026"
+    "file_name": "files/cq59bs4t404v",
+    "last_ingested": "Sun Apr 12 17:19:42 2026"
   },
   {
     "owner": "langchain-ai",
     "package": "langchain-google-genai",
     "language": "Python",
     "url": "https://github.com/langchain-ai/langchain-google/tree/main/libs/genai",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/n7m2ox9fdem3-1nv4ou6u0ycx",
-    "file_name": "files/n7m2ox9fdem3",
-    "last_ingested": "Thu Apr  9 09:19:06 2026"
+    "file_name": "files/do4pwu7rstg3",
+    "last_ingested": "Sun Apr 12 17:19:48 2026"
   },
   {
     "owner": "run-llama",
     "package": "llama-index",
     "language": "Python",
     "url": "https://github.com/run-llama/llama_index/tree/main/llama-index-core",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/drz6dcxmqj4b-xsb20wk2dcj6",
-    "file_name": "files/drz6dcxmqj4b",
-    "last_ingested": "Thu Apr  9 09:19:19 2026"
+    "file_name": "files/r9cgqo2wuuxs",
+    "last_ingested": "Sun Apr 12 17:19:54 2026"
   },
   {
     "owner": "run-llama",
     "package": "llama-index-llms-google-genai",
     "language": "Python",
     "url": "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/llms/llama-index-llms-google-genai",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/r1cl69ks0t8t-ny13wc6ke017",
-    "file_name": "files/r1cl69ks0t8t",
-    "last_ingested": "Thu Apr  9 09:19:24 2026"
+    "file_name": "files/8k8hwd062tb4",
+    "last_ingested": "Sun Apr 12 17:19:59 2026"
   },
   {
     "owner": "vercel",
     "package": "vercel-ai-sdk-core",
     "language": "TypeScript",
     "url": "https://github.com/vercel/ai/tree/main/packages/ai",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/8uiu83lvr7dc-ia0pwldsymg7",
-    "file_name": "files/8uiu83lvr7dc",
-    "last_ingested": "Thu Apr  9 09:19:35 2026"
+    "file_name": "files/wvrebwkk58x7",
+    "last_ingested": "Sun Apr 12 17:20:05 2026"
   },
   {
     "owner": "lancedb",
@@ -54,9 +49,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/lkwft8xlhl0w-zia2eny4m56r",
-    "file_name": "files/lkwft8xlhl0w",
-    "last_ingested": "Thu Apr  9 09:19:52 2026"
+    "file_name": "files/jwbxj4auh248",
+    "last_ingested": "Sun Apr 12 17:41:54 2026"
   },
   {
     "owner": "microsoft",
@@ -69,9 +63,8 @@
       "__pycache__",
       "*/samples/*"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/o8wquc8onrrk-rh1dkkv4ls73",
-    "file_name": "files/o8wquc8onrrk",
-    "last_ingested": "Thu Apr  9 09:20:05 2026"
+    "file_name": "files/nsaxw4ht5cv3",
+    "last_ingested": "Sun Apr 12 17:42:00 2026"
   },
   {
     "owner": "langchain-ai",
@@ -83,9 +76,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/796n6ee7mn7y-ksn1jco4a59k",
-    "file_name": "files/796n6ee7mn7y",
-    "last_ingested": "Thu Apr  9 09:20:13 2026"
+    "file_name": "files/onqhqtcjkx2c",
+    "last_ingested": "Sun Apr 12 17:42:06 2026"
   },
   {
     "owner": "pydantic",
@@ -97,9 +89,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/hcq3h2xz0ptd-9z9wc46dygbl",
-    "file_name": "files/hcq3h2xz0ptd",
-    "last_ingested": "Thu Apr  9 09:20:22 2026"
+    "file_name": "files/a3wwhyovzrfp",
+    "last_ingested": "Sun Apr 12 17:42:12 2026"
   },
   {
     "owner": "chroma-core",
@@ -111,9 +102,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/zn2jnauyslsw-ouoftb804oes",
-    "file_name": "files/zn2jnauyslsw",
-    "last_ingested": "Thu Apr  9 09:20:56 2026"
+    "file_name": "files/ji7nizft3mxq",
+    "last_ingested": "Sun Apr 12 17:42:24 2026"
   },
   {
     "owner": "chroma-core",
@@ -125,9 +115,8 @@
       "*.test.ts",
       "*/__fixtures__/*"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/z7p0c45w5mnr-wgl9b4forvux",
-    "file_name": "files/z7p0c45w5mnr",
-    "last_ingested": "Thu Apr  9 09:21:00 2026"
+    "file_name": "files/9pwkpz4hi6xx",
+    "last_ingested": "Sun Apr 12 17:42:30 2026"
   },
   {
     "owner": "browser-use",
@@ -153,9 +142,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/v3j106sz1a92-3abv3m8odck9",
-    "file_name": "files/v3j106sz1a92",
-    "last_ingested": "Thu Apr  9 09:26:16 2026"
+    "file_name": "files/s8ckc11nzljv",
+    "last_ingested": "Sun Apr 12 17:42:36 2026"
   },
   {
     "owner": "weaviate",
@@ -167,9 +155,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/p5n9wwj55nhk-rjdg8pc9yrye",
-    "file_name": "files/p5n9wwj55nhk",
-    "last_ingested": "Thu Apr  9 09:26:25 2026"
+    "file_name": "files/y86elzh26pi7",
+    "last_ingested": "Sun Apr 12 17:42:42 2026"
   },
   {
     "owner": "crewAIInc",
@@ -181,27 +168,24 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/5i3up8pxvwjo-39ltl7owohsm",
-    "file_name": "files/5i3up8pxvwjo",
-    "last_ingested": "Thu Apr  9 09:26:41 2026"
+    "file_name": "files/badprx2jg6rp",
+    "last_ingested": "Sun Apr 12 17:42:53 2026"
   },
   {
     "owner": "microsoft",
     "package": "semantic-kernel-dotnet",
     "language": "C#",
     "url": "https://github.com/microsoft/semantic-kernel/tree/main/dotnet/src/SemanticKernel.Core",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/un5gfc714efl-2bb7oonr99cm",
-    "file_name": "files/un5gfc714efl",
-    "last_ingested": "Thu Apr  9 09:26:48 2026"
+    "file_name": "files/dav3sndpk1uk",
+    "last_ingested": "Sun Apr 12 17:42:59 2026"
   },
   {
     "owner": "microsoft",
     "package": "semantic-kernel-dotnet-google",
     "language": "C#",
     "url": "https://github.com/microsoft/semantic-kernel/tree/main/dotnet/src/Connectors/Connectors.Google",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/d2ybqudgfoxo-fciq8zr96gux",
-    "file_name": "files/d2ybqudgfoxo",
-    "last_ingested": "Thu Apr  9 09:26:53 2026"
+    "file_name": "files/ew1wfetfyc81",
+    "last_ingested": "Sun Apr 12 17:43:04 2026"
   },
   {
     "owner": "microsoft",
@@ -211,9 +195,8 @@
     "exclude": [
       "*/test/*"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/nemqcw5ebua3-h390a3hptz2f",
-    "file_name": "files/nemqcw5ebua3",
-    "last_ingested": "Thu Apr  9 09:26:59 2026"
+    "file_name": "files/kkaxsa8nq3si",
+    "last_ingested": "Sun Apr 12 17:43:10 2026"
   },
   {
     "owner": "livekit",
@@ -225,9 +208,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/9lj9oi0gvaja-qdtg5hhxw3s7",
-    "file_name": "files/9lj9oi0gvaja",
-    "last_ingested": "Thu Apr  9 09:27:07 2026"
+    "file_name": "files/icnferw03kqr",
+    "last_ingested": "Sun Apr 12 17:43:16 2026"
   },
   {
     "owner": "livekit",
@@ -239,9 +221,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/oc6295pavgln-7fsdv7yenm69",
-    "file_name": "files/oc6295pavgln",
-    "last_ingested": "Thu Apr  9 09:27:12 2026"
+    "file_name": "files/e4ltrunu3nfs",
+    "last_ingested": "Sun Apr 12 17:43:22 2026"
   },
   {
     "owner": "agno-agi",
@@ -253,9 +234,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/z86ej0h5j0dn-t3cu78dsgnmd",
-    "file_name": "files/z86ej0h5j0dn",
-    "last_ingested": "Thu Apr  9 09:27:29 2026"
+    "file_name": "files/aev75lyuvjac",
+    "last_ingested": "Sun Apr 12 18:41:02 2026"
   },
   {
     "owner": "firebase",
@@ -267,9 +247,8 @@
       "*.test.ts",
       "*/__fixtures__/*"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/e6y5guchaglk-ez5xg2ft8z0h",
-    "file_name": "files/e6y5guchaglk",
-    "last_ingested": "Thu Apr  9 09:27:35 2026"
+    "file_name": "files/0to80br7jhhm",
+    "last_ingested": "Sun Apr 12 18:41:08 2026"
   },
   {
     "owner": "firebase",
@@ -281,9 +260,8 @@
       "*.test.ts",
       "*/__fixtures__/*"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/057fv1vg2qg7-ga9y4bzyvhc8",
-    "file_name": "files/057fv1vg2qg7",
-    "last_ingested": "Thu Apr  9 09:27:40 2026"
+    "file_name": "files/x93rfbarplmq",
+    "last_ingested": "Sun Apr 12 18:41:14 2026"
   },
   {
     "owner": "firebase",
@@ -294,9 +272,8 @@
       "*/tests/*",
       "*.test.ts"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/zobfgiaye6ig-ugt9ntuqtoi6",
-    "file_name": "files/zobfgiaye6ig",
-    "last_ingested": "Thu Apr  9 09:27:45 2026"
+    "file_name": "files/7p0n8rixc7sq",
+    "last_ingested": "Sun Apr 12 18:41:21 2026"
   },
   {
     "owner": "firebase",
@@ -306,9 +283,8 @@
     "exclude": [
       "*/*_test.go"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/0t9zk7i9k42v-un5cebok1uhv",
-    "file_name": "files/0t9zk7i9k42v",
-    "last_ingested": "Thu Apr  9 09:27:49 2026"
+    "file_name": "files/0851lfy66hmj",
+    "last_ingested": "Sun Apr 12 18:41:27 2026"
   },
   {
     "owner": "firebase",
@@ -318,9 +294,8 @@
     "exclude": [
       "*/*_test.go"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/7ghqzruwqz23-c0gf7tbbgqg1",
-    "file_name": "files/7ghqzruwqz23",
-    "last_ingested": "Thu Apr  9 09:27:54 2026"
+    "file_name": "files/1ge41qf6dri3",
+    "last_ingested": "Sun Apr 12 18:41:33 2026"
   },
   {
     "owner": "firebase",
@@ -332,9 +307,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/ggfr9ar01uih-k0sgbw8vctjl",
-    "file_name": "files/ggfr9ar01uih",
-    "last_ingested": "Thu Apr  9 09:27:59 2026"
+    "file_name": "files/8s24octupipb",
+    "last_ingested": "Sun Apr 12 18:41:39 2026"
   },
   {
     "owner": "firebase",
@@ -346,9 +320,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/913uteppki4p-ssan4fncdk1o",
-    "file_name": "files/913uteppki4p",
-    "last_ingested": "Thu Apr  9 09:28:05 2026"
+    "file_name": "files/l83mzet0dyud",
+    "last_ingested": "Sun Apr 12 18:41:46 2026"
   },
   {
     "owner": "microsoft",
@@ -360,27 +333,24 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/d2uh30w1hfy6-ide2sjiypz9n",
-    "file_name": "files/d2uh30w1hfy6",
-    "last_ingested": "Thu Apr  9 09:31:07 2026"
+    "file_name": "files/rk5tn9a9zk2t",
+    "last_ingested": "Sun Apr 12 20:15:56 2026"
   },
   {
     "owner": "microsoft",
     "package": "autogen-dotnet-core",
     "language": "C#",
     "url": "https://github.com/microsoft/autogen/tree/main/dotnet/src/AutoGen.Core",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/rfio3bvny6xv-zn93pfv32ukm",
-    "file_name": "files/rfio3bvny6xv",
-    "last_ingested": "Thu Apr  9 09:31:12 2026"
+    "file_name": "files/wbs86bb0bmwz",
+    "last_ingested": "Sun Apr 12 20:16:02 2026"
   },
   {
     "owner": "microsoft",
     "package": "autogen-dotnet-gemini",
     "language": "C#",
     "url": "https://github.com/microsoft/autogen/tree/main/dotnet/src/AutoGen.Gemini",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/m29bbwuvsp4i-wbewzm1ikexi",
-    "file_name": "files/m29bbwuvsp4i",
-    "last_ingested": "Thu Apr  9 09:31:16 2026"
+    "file_name": "files/fqig6jae3eea",
+    "last_ingested": "Sun Apr 12 20:16:07 2026"
   },
   {
     "owner": "Upsonic",
@@ -392,9 +362,8 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/rq1tsu9qgwft-t2gmi63qncxm",
-    "file_name": "files/rq1tsu9qgwft",
-    "last_ingested": "Thu Apr  9 09:31:29 2026"
+    "file_name": "files/60qtimf8rmvk",
+    "last_ingested": "Sun Apr 12 20:16:13 2026"
   },
   {
     "owner": "yamadashy",
@@ -405,30 +374,30 @@
       "*/tests/*",
       "*.test.ts"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/jkg5pguxdeb0-08ile12ti9ws",
-    "file_name": "files/jkg5pguxdeb0",
-    "last_ingested": "Thu Apr  9 09:31:35 2026"
+    "file_name": "files/5ucatbue0wgw",
+    "last_ingested": "Sun Apr 12 20:16:19 2026"
   },
   {
     "owner": "microsoft",
     "package": "agent-framework-dotnet",
     "language": "C#",
     "url": "https://github.com/microsoft/agent-framework/tree/main/dotnet/src",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/yqmj1k9ejsa0-x5y2h3zeyebw",
-    "file_name": "files/yqmj1k9ejsa0",
-    "last_ingested": "Thu Apr  9 09:32:20 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/nrbk7ii6pisl-wiewf5d3b76a",
+    "file_name": "files/nrbk7ii6pisl",
+    "last_ingested": "Sun Apr 12 17:09:44 2026"
   },
   {
     "owner": "CopilotKit",
     "package": "CopilotKit-ts-google",
     "language": "TypeScript",
-    "url": "https://github.com/CopilotKit/CopilotKit/tree/main/packages/v1/runtime/src/service-adapters/google",
+    "url": "https://github.com/CopilotKit/CopilotKit/tree/main/packages/runtime/src/service-adapters/google",
     "exclude": [
       "*/tests/*",
       "*.test.ts"
     ],
-    "file_name": "files/fzei3ual3spu",
-    "last_ingested": "Mon Mar 23 18:00:27 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/7wnejm3e1zvc-m43n19uwctkh",
+    "file_name": "files/7wnejm3e1zvc",
+    "last_ingested": "Sun Apr 12 17:10:07 2026"
   },
   {
     "owner": "CopilotKit",
@@ -440,9 +409,9 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/ke2evoywtrff-vjymgryog2o8",
-    "file_name": "files/ke2evoywtrff",
-    "last_ingested": "Thu Apr  9 09:32:41 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/wbjegh71qlda-5vy4aeokt1tt",
+    "file_name": "files/wbjegh71qlda",
+    "last_ingested": "Sun Apr 12 17:10:13 2026"
   },
   {
     "owner": "mem0ai",
@@ -454,9 +423,9 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/omxo81qhshqc-tv6as5qqag75",
-    "file_name": "files/omxo81qhshqc",
-    "last_ingested": "Thu Apr  9 09:32:50 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/jm99t79if46d-07wphvzth79i",
+    "file_name": "files/jm99t79if46d",
+    "last_ingested": "Sun Apr 12 17:10:21 2026"
   },
   {
     "owner": "mem0ai",
@@ -467,9 +436,9 @@
       "*/tests/*",
       "*.test.ts"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/bxf2ieqzvqo3-n01co82glwbx",
-    "file_name": "files/bxf2ieqzvqo3",
-    "last_ingested": "Thu Apr  9 09:32:55 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/2uumd0okx9e9-hurkx4qweved",
+    "file_name": "files/2uumd0okx9e9",
+    "last_ingested": "Sun Apr 12 17:10:30 2026"
   },
   {
     "owner": "openai",
@@ -481,9 +450,9 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/xlafavxdt1s4-o9esh7umjb9x",
-    "file_name": "files/xlafavxdt1s4",
-    "last_ingested": "Thu Apr  9 09:32:59 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/rol3rnsksufk-4pbzpz9yba6c",
+    "file_name": "files/rol3rnsksufk",
+    "last_ingested": "Sun Apr 12 17:10:38 2026"
   },
   {
     "owner": "openai",
@@ -495,9 +464,9 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/htavq9sxmkrb-lswzz939hkj8",
-    "file_name": "files/htavq9sxmkrb",
-    "last_ingested": "Thu Apr  9 09:33:41 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/6o08fpx1hfnn-19vjarpafxpa",
+    "file_name": "files/6o08fpx1hfnn",
+    "last_ingested": "Sun Apr 12 17:11:27 2026"
   },
   {
     "owner": "camel-ai",
@@ -509,9 +478,9 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/z0o24xgemrhn-39yb6ba0lgfl",
-    "file_name": "files/z0o24xgemrhn",
-    "last_ingested": "Thu Apr  9 09:33:55 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/si9mutb0pdjx-kup6sfqw2i9m",
+    "file_name": "files/si9mutb0pdjx",
+    "last_ingested": "Sun Apr 12 17:11:48 2026"
   },
   {
     "owner": "vercel",
@@ -526,9 +495,8 @@
       "**/__fixtures__/*",
       "packages/google/src/__fixtures__/*"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/jpgo0ptrbtip-huuulgdeusyq",
-    "file_name": "files/jpgo0ptrbtip",
-    "last_ingested": "Thu Apr  9 09:19:42 2026"
+    "file_name": "files/eztfekb3fxrp",
+    "last_ingested": "Sun Apr 12 17:20:11 2026"
   },
   {
     "owner": "BerriAI",
@@ -544,9 +512,8 @@
       "*/litellm_core_utils/tokenizers/*",
       "*/llms/huggingface/huggingface_llms_metadata/*"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/n66wq7yv0f87-vhlta4b04kfd",
-    "file_name": "files/n66wq7yv0f87",
-    "last_ingested": "Thu Apr  9 09:20:49 2026"
+    "file_name": "files/ns9wpdycm8r4",
+    "last_ingested": "Sun Apr 12 17:42:18 2026"
   },
   {
     "owner": "microsoft",
@@ -561,9 +528,9 @@
       "**/tsconfig.node.tsbuildinfo",
       "**/tsconfig.tsbuildinfo"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/tv4v064so5h7-a5dx5g9w3w39",
-    "file_name": "files/tv4v064so5h7",
-    "last_ingested": "Thu Apr  9 09:32:05 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/7msx8fxxy3f9-jydzry804pjo",
+    "file_name": "files/7msx8fxxy3f9",
+    "last_ingested": "Sun Apr 12 17:09:14 2026"
   },
   {
     "owner": "letta-ai",
@@ -576,9 +543,9 @@
       "__pycache__",
       "letta/interfaces/openai_streaming_interface.py"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/rig4e1wbqqle-gx5fricbcs1s",
-    "file_name": "files/rig4e1wbqqle",
-    "last_ingested": "Thu Apr  9 09:33:34 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/opp2bijouvlw-gj5gw2b7plvd",
+    "file_name": "files/opp2bijouvlw",
+    "last_ingested": "Sun Apr 12 17:11:18 2026"
   },
   {
     "owner": "CopilotKit",
@@ -591,9 +558,9 @@
       "*/__fixtures__/*",
       "**/icons.tsx"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/6v3rh0goe550-0470mxono0un",
-    "file_name": "files/6v3rh0goe550",
-    "last_ingested": "Thu Apr  9 09:32:33 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/v7mp4jvp6y25-ibk1amgfil00",
+    "file_name": "files/v7mp4jvp6y25",
+    "last_ingested": "Sun Apr 12 17:10:01 2026"
   },
   {
     "owner": "milvus-io",
@@ -606,9 +573,8 @@
       "__pycache__",
       "**/grpc_gen/**"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/8vjfj9x2hmwx-weudi4hgoslz",
-    "file_name": "files/8vjfj9x2hmwx",
-    "last_ingested": "Thu Apr  9 09:26:31 2026"
+    "file_name": "files/d3e7a0b0xeql",
+    "last_ingested": "Sun Apr 12 17:42:47 2026"
   },
   {
     "owner": "mastra-ai",
@@ -621,9 +587,8 @@
       "**/__recordings__/**",
       "**/__recordings__/*"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/rrrvr28rzymp-ekgyel9vw8mg",
-    "file_name": "files/rrrvr28rzymp",
-    "last_ingested": "Thu Apr  9 09:31:01 2026"
+    "file_name": "files/vt98liftrvrl",
+    "last_ingested": "Sun Apr 12 20:15:50 2026"
   },
   {
     "owner": "livekit",
@@ -633,9 +598,9 @@
     "exclude": [
       "*/*_test.go"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/3l64bslq1968-yp2vpk18cgnl",
-    "file_name": "files/3l64bslq1968",
-    "last_ingested": "Thu Apr  9 09:34:00 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/uxhufqufso0y-p7cfyz0rkgsc",
+    "file_name": "files/uxhufqufso0y",
+    "last_ingested": "Sun Apr 12 17:11:54 2026"
   },
   {
     "owner": "livekit",
@@ -646,9 +611,9 @@
       "*/test/*",
       "*.test.ts"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/qpq52b5o02rw-nurepj8kxcjr",
-    "file_name": "files/qpq52b5o02rw",
-    "last_ingested": "Thu Apr  9 09:34:07 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/wh5rrmbijql6-6puylrc2jtj9",
+    "file_name": "files/wh5rrmbijql6",
+    "last_ingested": "Sun Apr 12 17:12:02 2026"
   },
   {
     "owner": "livekit",
@@ -660,9 +625,9 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/llp8nc1afavu-bkwskbcbqg6f",
-    "file_name": "files/llp8nc1afavu",
-    "last_ingested": "Thu Apr  9 09:34:12 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/y84p068v7d4w-zcslhh7vfcc9",
+    "file_name": "files/y84p068v7d4w",
+    "last_ingested": "Sun Apr 12 17:12:08 2026"
   },
   {
     "owner": "pipecat-ai",
@@ -674,9 +639,9 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/o5bk6uo2bghh-u5bh5a0tudqm",
-    "file_name": "files/o5bk6uo2bghh",
-    "last_ingested": "Thu Apr  9 09:34:23 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/mwgnbibggopd-9508be5elj2t",
+    "file_name": "files/mwgnbibggopd",
+    "last_ingested": "Sun Apr 12 17:12:35 2026"
   },
   {
     "owner": "eigent-ai",
@@ -687,9 +652,9 @@
       "*/tests/*",
       "*.test.ts"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/86onu59b0voy-ygwxgyy40piy",
-    "file_name": "files/86onu59b0voy",
-    "last_ingested": "Thu Apr  9 09:34:48 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/6nvgg1vadfmt-kohyetxn9ak0",
+    "file_name": "files/6nvgg1vadfmt",
+    "last_ingested": "Sun Apr 12 17:13:05 2026"
   },
   {
     "owner": "qdrant",
@@ -701,9 +666,9 @@
       "*.pyc",
       "__pycache__"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/489910ok6vna-summb1klz6ae",
-    "file_name": "files/489910ok6vna",
-    "last_ingested": "Thu Apr  9 09:35:18 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/56b51cqp1f7i-cv70cs48gpa7",
+    "file_name": "files/56b51cqp1f7i",
+    "last_ingested": "Sun Apr 12 17:13:50 2026"
   },
   {
     "owner": "qdrant",
@@ -714,9 +679,9 @@
       "*/tests/*",
       "*.test.ts"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/qima5zxjgg63-7h1txteg1xwa",
-    "file_name": "files/qima5zxjgg63",
-    "last_ingested": "Thu Apr  9 09:35:23 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/029pe7p7kpbe-8i1un3afbr8h",
+    "file_name": "files/029pe7p7kpbe",
+    "last_ingested": "Sun Apr 12 17:13:57 2026"
   },
   {
     "owner": "pipecat-ai",
@@ -727,9 +692,9 @@
       "*/tests/*",
       "*.test.ts"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/3jabab50fltg-u3ims3mcosyl",
-    "file_name": "files/3jabab50fltg",
-    "last_ingested": "Thu Apr  9 09:34:28 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/68dn57cljhtg-9rui2v5ssnuf",
+    "file_name": "files/68dn57cljhtg",
+    "last_ingested": "Sun Apr 12 17:12:41 2026"
   },
   {
     "owner": "temporalio",
@@ -742,9 +707,9 @@
       "packages/test/tls_certs/*",
       "packages/test/tls_certs/**"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/q0xyy7fkdwvt-t8wtxvpf1uj9",
-    "file_name": "files/q0xyy7fkdwvt",
-    "last_ingested": "Thu Apr  9 09:35:10 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/foyt5rbmx2jn-01vxdjb3hssq",
+    "file_name": "files/foyt5rbmx2jn",
+    "last_ingested": "Sun Apr 12 17:13:39 2026"
   },
   {
     "owner": "temporalio",
@@ -758,9 +723,9 @@
       "temporalio/api/cloud/cloudservice/v1/service_pb2.py",
       "temporalio/api/*service/v1/service_pb2.py"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/nb5v5negam7q-jscqn5d2f8d0",
-    "file_name": "files/nb5v5negam7q",
-    "last_ingested": "Thu Apr  9 09:34:59 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/6ykjulvjvamq-a6lt7yee8ng0",
+    "file_name": "files/6ykjulvjvamq",
+    "last_ingested": "Sun Apr 12 17:13:24 2026"
   },
   {
     "owner": "googleapis",
@@ -783,9 +748,9 @@
     "package": "dotnet-genai",
     "language": "C#",
     "url": "https://github.com/googleapis/dotnet-genai/tree/main/Google.GenAI",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/vijnri4irz62-npxbbbenvg75",
-    "file_name": "files/vijnri4irz62",
-    "last_ingested": "Thu Apr  9 09:35:36 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/13v947vzgfuv-c3l6p4cfbsvw",
+    "file_name": "files/13v947vzgfuv",
+    "last_ingested": "Sun Apr 12 17:14:16 2026"
   },
   {
     "owner": "googleapis",
@@ -797,26 +762,69 @@
       "*/*_test.go",
       "**/testdata/*"
     ],
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/h7tt352yex6q-66pk1lpjc7iu",
-    "file_name": "files/h7tt352yex6q",
-    "last_ingested": "Thu Apr  9 09:35:29 2026"
+    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/lgdcnkawwcxt-c3arpbxjrezy",
+    "file_name": "files/lgdcnkawwcxt",
+    "last_ingested": "Sun Apr 12 17:14:05 2026"
   },
   {
     "owner": "googleapis",
     "package": "python-genai",
     "language": "Python",
     "url": "https://github.com/googleapis/python-genai/tree/main/google",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/f4dwjh6c9qq0-pxz6c5i72xy6",
-    "file_name": "files/f4dwjh6c9qq0",
-    "last_ingested": "Thu Apr  9 09:18:38 2026"
+    "file_name": "files/jv1fvg6lcrcs",
+    "last_ingested": "Sun Apr 12 17:19:30 2026"
   },
   {
     "owner": "googleapis",
     "package": "js-genai",
     "language": "TypeScript",
     "url": "https://github.com/googleapis/js-genai/tree/main/src",
-    "pending_operation_name": "fileSearchStores/aisdkindex-vcypy3ifaray/operations/al3btzhnbelu-xwtth7c1l388",
-    "file_name": "files/al3btzhnbelu",
-    "last_ingested": "Thu Apr  9 09:18:45 2026"
+    "file_name": "files/cqzggb7ixjo7",
+    "last_ingested": "Sun Apr 12 17:19:36 2026"
+  },
+  {
+    "owner": "openai",
+    "package": "openai-python",
+    "language": "Python",
+    "url": "https://github.com/openai/openai-python/tree/main/src/openai",
+    "exclude": [
+      "*/tests/*",
+      "*.pyc",
+      "__pycache__"
+    ],
+    "file_name": "files/dres2v0a9148",
+    "last_ingested": "Sun Apr 12 21:32:32 2026"
+  },
+  {
+    "owner": "openai",
+    "package": "openai-node",
+    "language": "TypeScript",
+    "url": "https://github.com/openai/openai-node/tree/master/src",
+    "exclude": [
+      "*/test/*",
+      "*.test.ts",
+      "*/__fixtures__/*"
+    ],
+    "file_name": "files/hcbyh4kjukfm",
+    "last_ingested": "Sun Apr 12 21:32:38 2026"
+  },
+  {
+    "owner": "openai",
+    "package": "openai-go",
+    "language": "Go",
+    "url": "https://github.com/openai/openai-go/tree/main",
+    "exclude": [
+      "*/*_test.go"
+    ],
+    "file_name": "files/boyuol3qcjnp",
+    "last_ingested": "Sun Apr 12 21:32:44 2026"
+  },
+  {
+    "owner": "openai",
+    "package": "openai-dotnet",
+    "language": "C#",
+    "url": "https://github.com/openai/openai-dotnet/tree/main/src",
+    "file_name": "files/enogs6fzri55",
+    "last_ingested": "Sun Apr 12 21:32:50 2026"
   }
 ]
