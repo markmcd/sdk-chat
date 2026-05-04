@@ -373,7 +373,12 @@
 - owner: openai
   package: openai-dotnet
   language: C#
-  url: https://github.com/openai/openai-dotnet/tree/main/src
+  url: https://github.com/openai/openai-dotnet
+  exclude:
+    - '*/tests/*'
+    - '*/specification/*'
+    - '*/codegen/*'
+    - '*.json'
 - owner: camel-ai
   package: camel
   language: Python
